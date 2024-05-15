@@ -293,7 +293,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-success deletebg radiusb"> Yes !! Delete it.
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebg radiusb"> Yes !! Delete it.
                         </button>
                     </div>
                 </form>
