@@ -32,7 +32,7 @@
       '#A52A2A', // Brown
       '#6B4423', // Coffee
       '#5C4033', // Dark Coffee
-      '#4B3621', // Extremely Dark Coffee
+      '#4B3621', // Extremely Coffee
     ];
 
     // Create the chart
