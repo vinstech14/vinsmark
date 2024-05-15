@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const userType = localStorage.getItem("userType");
     const userInfo = {
-        User: {partsToRemove: ["staffm", "interviewsheetm"] },
+        Staff: {partsToRemove: ["staffm", "interviewsheetm"] },
         Client: {partsToRemove: ["staffm", "clientm", "dashm", "dashid", "casem", "archivedm", "settingsm", "transactionm", "reportm", "calendarm"]},
-        Admin: {partsToRemove: ["interviewsheetm"] }
+        Attorney: {partsToRemove: ["interviewsheetm"] }
     };
 
     const {partsToRemove } = userInfo[userType] || {};
