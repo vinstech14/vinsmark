@@ -9,7 +9,7 @@ body {
     border-top-left-radius: 10px !important;
     border-top-right-radius: 10px !important;
 }
-/*try*/
+
 object {
     display: flex;
 }
@@ -101,13 +101,13 @@ object {
 }
 
 .viewbg{
-    background-color: #50C878;
+    background-color: #00A36C;
 }
 .editbg{
-    background-color: white/*dre background sa edit modal*/;
+    background-color: #00A36C; /*dre background sa edit modal*/
 }
 .viewbtn{
-    color: #50C878;
+    color: #28a745;
     font-size: 20px;
 }
 .editbtn{
@@ -115,7 +115,7 @@ object {
     font-size: 20px;
 }
 .deletebtn{
-    color: #00A36C;
+    color: #ff0000;
     font-size: 20px;
 }
 #searchid{
