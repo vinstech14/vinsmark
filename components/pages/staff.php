@@ -206,7 +206,7 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-danger deletebg radiusb">Delete it. </button>
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb">Delete it. </button>
                     </div>
                 </form>
 

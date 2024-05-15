@@ -96,6 +96,10 @@ object {
         overflow-x: hidden;
     }
 }
+.deletebtnbg{
+    background-color: #ff0000;
+}
+
 .deletebg{
     background-color: #00A36C; /*yes! delete it button lng ang red*/
 }
