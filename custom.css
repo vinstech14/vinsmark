@@ -101,21 +101,21 @@ object {
 }
 
 .deletebg{
-    background-color: #00A36C; /*yes! delete it button lng ang red*/
+    background-color: #00A36C;
 }
 
 .viewbg{
     background-color: #00A36C;
 }
 .editbg{
-    background-color: #00A36C; /*dre background sa edit modal, tas dre ky e white lng ang text sa button na upadate*/
+    background-color: #00A36C;
 }
 .viewbtn{
     color: #28a745;
     font-size: 20px;
 }
 .editbtn{
-    color: #28a745; /*mao ning sa icon*/
+    color: #28a745;
     font-size: 20px;
 }
 .deletebtn{
