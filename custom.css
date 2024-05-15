@@ -97,7 +97,7 @@ object {
     }
 }
 .deletebg{
-    background-color: #00A36C;
+    background-color: #ff0000;
 }
 
 .viewbg{
@@ -111,7 +111,7 @@ object {
     font-size: 20px;
 }
 .editbtn{
-    color: #28a745;
+    color: #28a745; /*mao ning sa icon*/
     font-size: 20px;
 }
 .deletebtn{

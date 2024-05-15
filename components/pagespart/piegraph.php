@@ -21,18 +21,18 @@
 
     // Generate shades of green
     const greenShades = [
-      '#98FB98', // Pale green
-      '#90EE90', // Light green
-      '#8FBC8F', // Dark Sea Green
-      '#7FFF00', // Chartreuse
-      '#32CD32', // Lime Green
-      '#3CB371', // Medium Sea Green
-      '#228B22', // Forest Green
-      '#2E8B57', // Sea Green
-      '#008000', // Green
-      '#006400', // Dark Green
-      '#004d00', // Very Dark Green
-      '#003300', // Extremely Dark Green
+      '#F0E68C', // Khaki
+      '#D2B48C', // Tan
+      '#C3B091', // Khaki web color
+      '#CD853F', // Peru
+      '#DEB887', // BurlyWood
+      '#D2691E', // Chocolate
+      '#8B4513', // SaddleBrown
+      '#A0522D', // Sienna
+      '#A52A2A', // Brown
+      '#6B4423', // Coffee
+      '#5C4033', // Dark Coffee
+      '#4B3621', // Extremely Dark Coffee
     ];
 
     // Create the chart

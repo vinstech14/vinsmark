@@ -122,7 +122,7 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-light">
+                <div class="modal-header editbg text-light">
                     <h5 class="modal-title" id="exampleModalLabel"> Edit Client Data </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -214,7 +214,7 @@
 
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">Close</button>
-                        <button type="submit" name="updatedata" class="btn btn-success radiusb">Update Data</button>
+                        <button type="submit" name="updatedata" class="btn editbg radiusb">Update Data</button>
                     </div>
                 </form>
             </div>

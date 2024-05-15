@@ -175,7 +175,7 @@ if(isset($_POST['submit'])){
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">Close</button>
-                        <button type="submit" name="updatedatastaff" class="btn btn-success radiusb">Update Data</button>
+                        <button type="submit" name="updatedatastaff" class="btn editbg radiusb">Update Data</button>
                     </div>
                 </form>
 

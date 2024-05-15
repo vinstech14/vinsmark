@@ -20,7 +20,7 @@
     const cases = [5, 20, 15, 30, 45, 10, 15];
 
     // Generate pastel colors avoiding shades of pink
-    const pastelColors = '#98FB98';
+    const pastelColors = '#8B4513';
 
     // Create the chart
     var ctx = document.getElementById('myChart').getContext('2d');

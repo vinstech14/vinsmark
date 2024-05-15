@@ -20,7 +20,7 @@
     const cases = [100, 150, 200, 250, 300]; // Sample cases data for each year
 
     // Generate shades of green that are not too bright and not too dark
-    const greenShades = '#98FB98';
+    const greenShades = '#8B4513';
 
     // Create the chart
     var ctx = document.getElementById('myChart').getContext('2d');
