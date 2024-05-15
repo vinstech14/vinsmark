@@ -130,7 +130,7 @@
                         foreach ($result as $row) {
                     ?>
                             <tr class="text-center">
-                                <td class="d-none">
+                                <td class="d-none searchid">
                                     <?php echo $row['id']; ?>
                                 </td>
                                 <td>
@@ -246,6 +246,49 @@
             });
         });
     </script>
+<script>
+    /*
+    $(document).ready(function () {
+        $('.sbtn').on('click', function () {
+            var category = document.getElementById('selectcategory').value;
+            var fromdate = document.getElementById('fromdate').value;
+            var todate = document.getElementById('todate').value;
+
+            $.ajax({
+                url: "../../receivedapi/searching.php",
+                type: "POST",
+                data: { 
+                    d1: category, 
+                    d2: fromdate, 
+                    d3: todate, 
+                    c1: 'category', 
+                    c2: 'fromdate', 
+                    c3: 'todate',
+                    t: 'archived' 
+                },
+                success: function (response) {
+                    var datas = JSON.parse(response);
+                    var searchIds = datas.map(function(data) {
+                        return parseInt(data.id); // Convert search ID to number
+                    });
+                        
+                    $('#datatableid tbody tr').each(function() {
+                        var tableId = parseInt($(this).find('.searchid').text().trim()); // Convert table ID to number
+                        if (searchIds.includes(tableId)) 
+                            $(this).show();
+                        else 
+                            $(this).hide(); 
+                        });
+                    },
+
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });*/
+</script>
 </body>
 
 </html>

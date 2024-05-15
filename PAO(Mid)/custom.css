@@ -73,7 +73,6 @@ object {
     padding: 6px;
   }
 .sideback{
-    /*#013220*/
     background-color: #0f5233;
 }
 .clsearch::placeholder{
@@ -103,6 +102,9 @@ object {
 
 .viewbg{
     background-color: #50C878;
+}
+.editbg{
+    background-color: white/*dre background sa edit modal*/;
 }
 .viewbtn{
     color: #50C878;

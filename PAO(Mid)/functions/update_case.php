@@ -19,7 +19,7 @@ if(isset($_POST['updatedata'])){
     $startdate = $_POST['ustartdate'];
     $casedate = $_POST['ucasedate'];
     $columns = ['itemnumber','controlnumber','partyrepresented','gender','casetitle','court','casenumber','causeofaction','casestatus','lastactiontaken','causeoftermination','casedate', 'casetype', 'startdate'];
-    $data = [$itemno,$controlno,$party,$gender,$casetitle,$court,$casenumber,$coa,$casestatus,$lat,$cot,$casedate];
+    $data = [$itemno,$controlno,$party,$gender,$casetitle,$court,$casenumber,$coa,$casestatus,$lat,$cot,$casedate,$casetype,$startdate];
     $conditions = "id = '$id'";
     
     if(updateData($conn, 'cases', $columns, $data, $conditions)===true)

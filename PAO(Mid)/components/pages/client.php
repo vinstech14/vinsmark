@@ -452,9 +452,9 @@
                 }).get();
 
                 $.ajax({
-                    url: "../../receivedapi/fetchclientdata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t:'client' },
                     success: function (response) {
                         var datas = JSON.parse(response);
                         //console.log(datas);
@@ -535,9 +535,9 @@
                 }).get();
 
                 $.ajax({
-                    url: "../../receivedapi/fetchclientdata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t:'client'},
                     success: function (response) {
                         var datas = JSON.parse(response);
 

@@ -147,7 +147,7 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-success text-light">
+                <div class="modal-header editbg text-light">
                     <h5 class="modal-title" id="exampleModalLabel"> Edit Case Data </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -534,9 +534,9 @@
                 var statuscolor = document.getElementById('vcasestatus');
                     statuscolor.style.borderRadius = "4px";
                 $.ajax({
-                    url: "../../receivedapi/fetchcasedata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t:'cases' },
                     success: function (response) {
                         var datas = JSON.parse(response);
 
@@ -634,9 +634,9 @@
                 }).get();
 
                 $.ajax({
-                    url: "../../receivedapi/fetchcasedata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t:'cases' },
                     success: function (response) {
                         var datas = JSON.parse(response);
 

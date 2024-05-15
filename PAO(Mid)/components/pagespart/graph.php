@@ -29,7 +29,7 @@
       data: {
         labels: days,
         datasets: [{
-          label: 'Close',
+          label: 'Total Cases',
           data: cases,
           borderColor: pastelColors, // Use the first pastel color
           backgroundColor: pastelColors, // Use the first pastel color as background

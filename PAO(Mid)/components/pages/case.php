@@ -403,7 +403,7 @@
                         <div class="row mb-2 justify-content-center">
                             <div class="col-md-2">
                                 <select id="selectcourt" name="selectcourt" class="form-control">
-                                    <option disabled selected>Select Court</option>
+                                    <option disabled selected value=''>Select Court</option>
                                     <option value="RTC 34">RTC 34</option>
                                     <option value="RTC 4">RTC 4</option>
                                     <option value="RTC 3">RTC 3</option>
@@ -414,7 +414,7 @@
                             </div>
                             <div class="col-md-2">
                                 <select id="typeofcase" name="typeofcase" class="form-control">
-                                    <option disabled selected>Type of Case</option>
+                                    <option disabled selected value=''>Type of Case</option>
                                     <option value="Criminal">Criminal</option>
                                     <option value="Administrative">Administrative</option>
                                     <option value="Civil">Civil</option>
@@ -443,7 +443,7 @@
                             </div>
                         </div>
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-success sideback radiusb">Search</button>
+                                <button type="button" class="btn btn-success sideback radiusb sbtn">Search</button>
                             </div>
                         </div>
 
@@ -470,7 +470,7 @@
                         foreach ($result as $row) {
                     ?>
                             <tr class="text-center">
-                                <td class="d-none">
+                                <td class="d-none searchid">
                                     <?php echo $row['id']; ?>
                                 </td>
                                 <td>
@@ -533,9 +533,9 @@
                 var statuscolor = document.getElementById('vcasestatus');
                     statuscolor.style.borderRadius = "4px";
                 $.ajax({
-                    url: "../../receivedapi/fetchcasedata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t: 'cases'},
                     success: function (response) {
                         var datas = JSON.parse(response);
 
@@ -551,6 +551,7 @@
                         $('#vcasestatus').text(datas[0].casestatus);
                         $('#vlastactiontaken').text(datas[0].lastactiontaken);
                         $('#vcauseoftermination').text(datas[0].causeoftermination);
+                        $('#vstartdate').text(datas[0].startdate);
                         $('#vcasedate').text(datas[0].casedate);
                    
                     if(statuscolor.textContent === 'Pending'){
@@ -619,7 +620,7 @@
     </script>
 
     <script>
-        $(document).ready(function () {
+     /*   $(document).ready(function () {
 
             $('.editbtn').on('click', function () {
 
@@ -632,9 +633,9 @@
                 }).get();
 
                 $.ajax({
-                    url: "../../receivedapi/fetchcasedata.php",
+                    url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0] },
+                    data: { id: data[0], t:'cases'},
                     success: function (response) {
                         var datas = JSON.parse(response);
 
@@ -658,8 +659,54 @@
                     }
                 });
             });
-        });
+        });*/
     </script>
+ <script>
+    $(document).ready(function () {
+        $('.sbtn').on('click', function () {
+            var court = document.getElementById('selectcourt').value;
+            var casetype = document.getElementById('typeofcase').value;
+            var fromdate = document.getElementById('fromdate').value;
+            var todate = document.getElementById('todate').value;
+
+            $.ajax({
+                url: "../../receivedapi/searching.php",
+                type: "POST",
+                data: { 
+                    d1: court, 
+                    d2: casetype, 
+                    d3: fromdate, 
+                    d4: todate, 
+                    c1: 'court', 
+                    c2: 'casetype', 
+                    c3: 'startdate', 
+                    c4: 'casedate', 
+                    t: 'cases' 
+                },
+                success: function (response) {
+                    var datas = JSON.parse(response);
+                    var searchIds = datas.map(function(data) {
+                        return parseInt(data.id); // Convert search ID to number
+                    });
+                        
+                    $('#datatableid tbody tr').each(function() {
+                        var tableId = parseInt($(this).find('.searchid').text().trim()); // Convert table ID to number
+                        if (searchIds.includes(tableId)) 
+                            $(this).show();
+                        else 
+                            $(this).hide(); 
+                        });
+                    },
+
+                error: function (xhr, status, error) {
+                    // Handle errors
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 
 </html>

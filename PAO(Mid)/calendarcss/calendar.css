@@ -40,6 +40,10 @@ body {
     transform: translateY(-5%) !important;
 }
 
+.fc-customButton-button:hover {
+    background-color: #042516 !important;
+}
+
 .form-group {
     margin-bottom: 1rem;
 }

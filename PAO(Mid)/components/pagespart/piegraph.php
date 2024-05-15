@@ -42,7 +42,7 @@
       data: {
         labels: months,
         datasets: [{
-          label: 'Close',
+          label: "Total Cases",
           data: cases,
           backgroundColor: greenShades, // Set shades of green for each month
         }]

@@ -29,7 +29,7 @@
       data: {
         labels: years,
         datasets: [{
-          label: 'Close',
+          label: 'Total Cases',
           data: cases,
           backgroundColor: greenShades, // Use shades of green for bars
         }]
