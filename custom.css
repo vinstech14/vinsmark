@@ -97,14 +97,14 @@ object {
     }
 }
 .deletebg{
-    background-color: #ff0000;
+    background-color: #00A36C; /*yes! delete it button lng ang red*/
 }
 
 .viewbg{
     background-color: #00A36C;
 }
 .editbg{
-    background-color: #00A36C; /*dre background sa edit modal*/
+    background-color: #00A36C; /*dre background sa edit modal, tas dre ky e white lng ang text sa button na upadate*/
 }
 .viewbtn{
     color: #28a745;
