@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2024 at 04:20 AM
+-- Generation Time: May 15, 2024 at 04:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -40,8 +40,8 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `name`, `email`, `password`, `usertype`) VALUES
-(1, 'admin', 'admin@gmail.com', 'admin123', 'Admin'),
-(2, 'user', 'user@gmail.com', 'user123', 'User'),
+(1, 'admin', 'admin@gmail.com', 'admin123', 'Attorney'),
+(2, 'user', 'user@gmail.com', 'user123', 'Staff'),
 (3, 'client', 'client@gmail.com', 'client123', 'Client'),
 (11, 'Ryl', 'ryl@gmail.com', 'rylryl', 'Client'),
 (12, 'daryl', 'darylcerina1@gmail.com', 'darealme#2', 'Client'),
@@ -158,31 +158,6 @@ CREATE TABLE `reports` (
 INSERT INTO `reports` (`id`, `kra`, `kip`, `total`, `cr`, `cv`, `adm1`, `adm2`, `adm3`) VALUES
 (1, 'test', 'test', 101, 'test', 'test', 'test', 'test', 'test');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `representation`
---
-
-CREATE TABLE `representation` (
-  `id` int(11) NOT NULL,
-  `region` varchar(99) DEFAULT NULL,
-  `district_office` varchar(99) DEFAULT NULL,
-  `date` date DEFAULT NULL,
-  `control_number` int(11) DEFAULT NULL,
-  `referred_by` varchar(99) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `representation`
---
-
-INSERT INTO `representation` (`id`, `region`, `district_office`, `date`, `control_number`, `referred_by`) VALUES
-(2, 'Region XI', 'Davao', '2024-04-22', 2147483647, 'Robert'),
-(5, 'R13', 'Tagum', '2024-04-22', 4546546, NULL),
-(6, NULL, NULL, NULL, NULL, NULL),
-(7, NULL, NULL, NULL, NULL, NULL);
-
 --
 -- Indexes for dumped tables
 --
@@ -218,12 +193,6 @@ ALTER TABLE `reports`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `representation`
---
-ALTER TABLE `representation`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -256,12 +225,6 @@ ALTER TABLE `client`
 --
 ALTER TABLE `reports`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `representation`
---
-ALTER TABLE `representation`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

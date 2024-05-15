@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     const userType = localStorage.getItem("userType");
     const userInfo = {
-        User: {imageSrc: "../images/user.png"},
+        Staff: {imageSrc: "../images/user.png"},
         Client: {imageSrc: "../images/client.png"},
-        Admin: {imageSrc: "../images/admin.png"}
+        Attorney: {imageSrc: "../images/admin.png"}
     };
 
     const {imageSrc} = userInfo[userType] || {};

@@ -39,8 +39,8 @@
           <div class="m-3">
             <select class="form-select text-center radiusb" id="userType" name="userType" onchange="showLoginField(this)">
               <option selected disabled>Select Type of User</option>
-              <option value="Admin">Admin</option>
-              <option value="User">User</option>
+              <option value="Attorney">Attorney</option>
+              <option value="Staff">Staff</option>
               <option value="Client">Client</option>
             </select>
           </div>
