@@ -99,8 +99,8 @@ if(isset($_POST['submit'])){
                         <div class="col-md-6">
                         <label for="user_type" class="form-label">User Type:</label>
                             <select id="user_type" name="user_type" class="form-control">
-                                <option value="ADMIN">Admin</option>
-                                <option value="USER">User</option>
+                                <option value="Attorney">Attorney</option>
+                                <option value="Staff">Staff</option>
                                 <option value="Client">Client</option>
                             </select>
                         </div>
@@ -165,8 +165,8 @@ if(isset($_POST['submit'])){
                             <label for="uusertype" class="col-sm-2 col-form-label">Type</label>
                             <div class="col-sm-10">
                                 <select id="uusertype" name="uusertype" class="form-control">
-                                    <option value="Admin">Admin</option>
-                                    <option value="User">User</option>
+                                    <option value="Attorney">Attorney</option>
+                                    <option value="Staff">Staff</option>
                                     <option value="Client">Client</option>
                                 </select>
                             </div>
