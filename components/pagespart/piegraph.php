@@ -26,7 +26,7 @@
       '#C3B091', // Khaki web color
       '#CD853F', // Peru
       '#DEB887', // BurlyWood
-      '#D2691E', // Chocolate
+      '#D2691E', // Chocolate 
       '#8B4513', // SaddleBrown
       '#A0522D', // Sienna
       '#A52A2A', // Brown
