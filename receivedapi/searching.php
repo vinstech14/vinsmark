@@ -29,10 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conditions[] = "$column2 = '$data2'";
     }
     if (!empty($data3) && !empty($column3)) {
-        $conditions[] = "$column3 >= '$data3'";
+        $conditions[] = "$column3 = '$data3'";
     }
     if (!empty($data4) && !empty($column4)) {
-        $conditions[] = "$column4 <= '$data4'";
+        $conditions[] = "$column4 = '$data4'";
     }
 
     // Combine conditions into a single string

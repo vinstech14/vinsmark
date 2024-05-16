@@ -245,7 +245,8 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb"> Yes !! Delete it.
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb"> Yes !!
+                            Delete it.
                         </button>
                     </div>
                 </form>
@@ -390,7 +391,7 @@
         </div>
     </div>
 
-        <div class="container-fluid">
+    <div class="container-fluid">
         <h2 class="text-start text-md-start">Case</h2>
         <!--<div style="text-align:right;">
             <button type="button" class="btn btn-success sideback" data-toggle="modal"
@@ -433,21 +434,21 @@
                                 </div>
                             </div>
                             <div class="col-md-3">
-                            <div class="row">
-                                <div class="col-auto">
-                                    <label class="d-block">To Date:</label>
-                                </div>
-                                <div class="col">
-                                    <input type="date" class="form-control" name="todate" id="todate">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <label class="d-block">To Date:</label>
+                                    </div>
+                                    <div class="col">
+                                        <input type="date" class="form-control" name="todate" id="todate">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                             <div class="col-md-2">
                                 <button type="button" class="btn btn-success sideback radiusb sbtn">Search</button>
                             </div>
                         </div>
 
-                        
+
                         <thead>
                             <tr class="text-center sideback text-light">
                                 <th scope="col" class="d-none">ID</th>
@@ -531,11 +532,11 @@
                     return $(this).text();
                 }).get();
                 var statuscolor = document.getElementById('vcasestatus');
-                    statuscolor.style.borderRadius = "4px";
+                statuscolor.style.borderRadius = "4px";
                 $.ajax({
                     url: "../../receivedapi/fetchdata.php",
                     type: "POST",
-                    data: { id: data[0], t: 'cases'},
+                    data: { id: data[0], t: 'cases' },
                     success: function (response) {
                         var datas = JSON.parse(response);
 
@@ -553,26 +554,26 @@
                         $('#vcauseoftermination').text(datas[0].causeoftermination);
                         $('#vstartdate').text(datas[0].startdate);
                         $('#vcasedate').text(datas[0].casedate);
-                   
-                    if(statuscolor.textContent === 'Pending'){
-                        statuscolor.style.backgroundColor = 'yellow';
-                        statuscolor.style.color = 'black';
+
+                        if (statuscolor.textContent === 'Pending') {
+                            statuscolor.style.backgroundColor = 'yellow';
+                            statuscolor.style.color = 'black';
                         }
-                    else if(statuscolor.textContent === 'Terminated'){
-                        statuscolor.style.backgroundColor = 'red';
-                        statuscolor.style.color = 'white';
-                    }
-                    else{
-                        statuscolor.style.backgroundColor = 'green';
-                        statuscolor.style.color = 'white';
-                    }
+                        else if (statuscolor.textContent === 'Terminated') {
+                            statuscolor.style.backgroundColor = 'red';
+                            statuscolor.style.color = 'white';
+                        }
+                        else {
+                            statuscolor.style.backgroundColor = 'green';
+                            statuscolor.style.color = 'white';
+                        }
                     },
                     error: function (xhr, status, error) {
                         // Handle errors
                         console.error(xhr.responseText);
                     }
                 });
-                
+
             });
 
         });
@@ -618,94 +619,51 @@
             });
         });
     </script>
-
     <script>
-     /*   $(document).ready(function () {
-
-            $('.editbtn').on('click', function () {
-
-                $('#editmodal').modal('show');
-
-                $tr = $(this).closest('tr');
-
-                var data = $tr.children("td").map(function () {
-                    return $(this).text();
-                }).get();
+        $(document).ready(function () {
+            $('.sbtn').on('click', function () {
+                var court = document.getElementById('selectcourt').value;
+                var casetype = document.getElementById('typeofcase').value;
+                var fromdate = document.getElementById('fromdate').value;
+                var todate = document.getElementById('todate').value;
 
                 $.ajax({
-                    url: "../../receivedapi/fetchdata.php",
+                    url: "../../receivedapi/searching.php",
                     type: "POST",
-                    data: { id: data[0], t:'cases'},
+                    data: {
+                        d1: court,
+                        d2: casetype,
+                        d3: fromdate,
+                        d4: todate,
+                        c1: 'court',
+                        c2: 'casetype',
+                        c3: 'startdate',
+                        c4: 'casedate',
+                        t: 'cases'
+                    },
                     success: function (response) {
                         var datas = JSON.parse(response);
+                        var searchIds = datas.map(function (data) {
+                            return parseInt(data.id); // Convert search ID to number
+                        });
 
-                        $('#update_id').val(datas[0].id);
-                        $('#uitemnumber').val(datas[0].itemnumber);
-                        $('#ucontrolnumber').val(datas[0].controlnumber);
-                        $('#upartyrepresented').val(datas[0].partyrepresented);
-                        $('#ugender').val(datas[0].gender);
-                        $('#ucasetitle').val(datas[0].casetitle);
-                        $('#ucourt').val(datas[0].court);
-                        $('#ucasenumber').val(datas[0].casenumber);
-                        $('#ucauseofaction').val(datas[0].causeofaction);
-                        $('#ucasestatus').val(datas[0].casestatus);
-                        $('#ulastactiontaken').val(datas[0].lastactiontaken);
-                        $('#ucauseoftermination').val(datas[0].causeoftermination);
-                        $('#ucasedate').val(datas[0].casedate);
+                        $('#datatableid tbody tr').each(function () {
+                            var tableId = parseInt($(this).find('.searchid').text().trim()); // Convert table ID to number
+                            if (searchIds.includes(tableId))
+                                $(this).show();
+                            else
+                                $(this).hide();
+                        });
                     },
+
                     error: function (xhr, status, error) {
                         // Handle errors
                         console.error(xhr.responseText);
                     }
                 });
             });
-        });*/
-    </script>
- <script>
-    $(document).ready(function () {
-        $('.sbtn').on('click', function () {
-            var court = document.getElementById('selectcourt').value;
-            var casetype = document.getElementById('typeofcase').value;
-            var fromdate = document.getElementById('fromdate').value;
-            var todate = document.getElementById('todate').value;
-
-            $.ajax({
-                url: "../../receivedapi/searching.php",
-                type: "POST",
-                data: { 
-                    d1: court, 
-                    d2: casetype, 
-                    d3: fromdate, 
-                    d4: todate, 
-                    c1: 'court', 
-                    c2: 'casetype', 
-                    c3: 'startdate', 
-                    c4: 'casedate', 
-                    t: 'cases' 
-                },
-                success: function (response) {
-                    var datas = JSON.parse(response);
-                    var searchIds = datas.map(function(data) {
-                        return parseInt(data.id); // Convert search ID to number
-                    });
-                        
-                    $('#datatableid tbody tr').each(function() {
-                        var tableId = parseInt($(this).find('.searchid').text().trim()); // Convert table ID to number
-                        if (searchIds.includes(tableId)) 
-                            $(this).show();
-                        else 
-                            $(this).hide(); 
-                        });
-                    },
-
-                error: function (xhr, status, error) {
-                    // Handle errors
-                    console.error(xhr.responseText);
-                }
-            });
         });
-    });
-</script>
+    </script>
 
 </body>
 
