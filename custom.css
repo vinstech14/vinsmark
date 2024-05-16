@@ -349,4 +349,16 @@ object {
   .btn .fa-edit {
     animation: pencil-writing 5s ease-in-out infinite;
   }
+  /*.child-item {
+    padding-left: 2rem;
+  }
+  
+  #arrowIcon {
+    transition: transform 0.3s; 
+  }
+  
+  .open #arrowIcon {
+    transform: rotate(180deg);
+  }*/
+  
 

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const userInfo = {
         Staff: {partsToRemove: ["staffm", "interviewsheetm"] },
         Client: {partsToRemove: ["staffm", "clientm", "dashm", "dashid", "casem", "archivedm", "settingsm", "transactionm", "reportm", "calendarm"]},
-        Attorney: {partsToRemove: ["interviewsheetm"] }
+        Attorney: {partsToRemove: ["interviewsheetm", "clientm"] }
     };
 
     const {partsToRemove } = userInfo[userType] || {};

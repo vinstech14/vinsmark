@@ -18,6 +18,19 @@ function toggleScroll(direction) {
     down.style.display = "block";
   }
 }
+function toggleInterviewSheet() {
+  var children = document.getElementById("ischildren");
+  var arrowIcon = document.getElementById("arrowIcon");
+
+  if (children.style.display === "none") {
+    children.style.display = "block";
+    arrowIcon.classList.add("open");
+  } else {
+    children.style.display = "none";
+    arrowIcon.classList.remove("open");
+  }
+}
+
 function toggleInputState(checkbox, inputbox){
     var inputbox = document.getElementById(inputbox);
     var checkbox = document.getElementById(checkbox);
