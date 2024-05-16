@@ -302,7 +302,7 @@ object {
 }
 
 @keyframes eye-blink {
-    0%, 20%, 100% {
+    0%, 20%, 40%, 60%, 80%, 100% {
       transform: scaleY(1);
     }
     10%, 90% {
@@ -314,7 +314,7 @@ object {
   }
   
   .btn .fa-eye {
-    animation: eye-blink 5s ease-in-out infinite;
+    animation: eye-blink 4s ease-in-out infinite;
     transform-origin: center center;
   }
   
