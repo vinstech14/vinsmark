@@ -300,7 +300,8 @@ object {
         height: auto !important;
     }
 }
-/*view animation*/
+
+/*view animation
 @keyframes eye-blink {
     0%, 20%, 40%, 60%, 80%, 100% {
       transform: scaleY(1);
@@ -317,7 +318,7 @@ object {
     animation: eye-blink 4s ease-in-out infinite;
     transform-origin: center center;
   }
-/*delete animation*/
+
 @keyframes trash-shake {
     0%, 100% {
       transform: rotate(0deg);
@@ -333,7 +334,7 @@ object {
   .btn .fa-trash {
     animation: trash-shake 5s ease-in-out infinite;
   }
-/*edit animation*/
+
 @keyframes pencil-writing {
     0%, 100% {
       transform: translateX(0);
@@ -349,16 +350,4 @@ object {
   .btn .fa-edit {
     animation: pencil-writing 5s ease-in-out infinite;
   }
-  /*.child-item {
-    padding-left: 2rem;
-  }
-  
-  #arrowIcon {
-    transition: transform 0.3s; 
-  }
-  
-  .open #arrowIcon {
-    transform: rotate(180deg);
-  }*/
-  
-
+*/

@@ -1,4 +1,4 @@
-function toggleScroll(direction) {
+/*function toggleScroll(direction) {
   var up = document.getElementById('scrollup');
   var down = document.getElementById('scrolldown');
   
@@ -17,9 +17,9 @@ function toggleScroll(direction) {
     up.style.display = "none";
     down.style.display = "block";
   }
-}
-function toggleInterviewSheet() {
-  var children = document.getElementById("ischildren");
+}*/
+ function toggleInterviewSheet() {
+  var children = document.getElementById("interviewSheetChildren");
   var arrowIcon = document.getElementById("arrowIcon");
 
   if (children.style.display === "none") {
@@ -30,7 +30,6 @@ function toggleInterviewSheet() {
     arrowIcon.classList.remove("open");
   }
 }
-
 function toggleInputState(checkbox, inputbox){
     var inputbox = document.getElementById(inputbox);
     var checkbox = document.getElementById(checkbox);
