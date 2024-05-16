@@ -12,9 +12,18 @@
 
 <body class="generalbg">
   <div class="scroll-down-btn text-end">
-    <a href="#bottom" onclick="toggleScroll()">
-      <i class="fas fa-chevron-down scrollIcon" style="color:#013220;"></i>
+    <div class="col">
+    <div class="row up" id="scrollup" style="display:none;">
+    <a href="#bottom" onclick=" toggleScroll('up')">
+      <i class="fas fa-chevron-up scrollIcon" style="color:#013220;"></i>
     </a>
+    </div>
+    <div class="row down" id="scrolldown">
+    <a href="#bottom" onclick="toggleScroll('down')">
+      <i class="fas fa-chevron-down scrollIcon side" style="color:#013220;"></i>
+    </a>
+    </div>
+    </div>
   </div>
   <div class="container">
     <form method="post" action="../../functions/save.php">

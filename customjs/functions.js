@@ -1,11 +1,22 @@
-function toggleScroll() {
- // var icon = document.getElementById("scrollIcon");
+function toggleScroll(direction) {
+  var up = document.getElementById('scrollup');
+  var down = document.getElementById('scrolldown');
+  
+  if (direction === 'down') {
     window.scrollTo({
       top: document.body.scrollHeight,
       behavior: 'smooth'
     });
-  //icon.classList.remove("fas fa-chevron-down");
-  //icon.classList.add("fas fa-chevron-up");
+    up.style.display = "block";
+    down.style.display = "none";
+  } else if (direction === 'up') {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    up.style.display = "none";
+    down.style.display = "block";
+  }
 }
 function toggleInputState(checkbox, inputbox){
     var inputbox = document.getElementById(inputbox);
