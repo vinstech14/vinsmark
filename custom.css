@@ -300,3 +300,21 @@ object {
         height: auto !important;
     }
 }
+
+@keyframes eye-blink {
+    0%, 20%, 100% {
+      transform: scaleY(1);
+    }
+    10%, 90% {
+      transform: scaleY(0.5);
+    }
+    50% {
+      transform: scaleY(0.1);
+    }
+  }
+  
+  .btn .fa-eye {
+    animation: eye-blink 5s ease-in-out infinite;
+    transform-origin: center center;
+  }
+  
