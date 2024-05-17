@@ -12,13 +12,13 @@
 
 <body class="generalbg">
  <div class="container d-flex generalbg justify-content-center align-items-center vh-100 d-flex">
-    <div class="card sideback w-50 shadowbottom" style="border-color:white;">
+    <div class="card sideback w-50 shadowbottom popon" style="border-color:white;">
       <div class="card-body bg-transparent" style="border-radius: 10px;">
         <div class="row">
-            <div class="text-center">
+            <div class="text-center popin">
               <img src="../images/pao.png" class="rounded-circle" alt="Avatar" style="width: 150px; height: auto;"/>
             </div>
-        <div class="card bg-light mt-3" id="cardl">
+        <div class="card bg-light mt-3 popin" id="cardl">
         <form class="mt-2" method="post" action="./functions/login.php">
           <h2 class=text-center>Login</h2>
           <div class="m-3" id="un" style="display: none;">

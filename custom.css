@@ -344,9 +344,24 @@ object {
       transform: translateY(0);
     }
   }
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-75%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   
   .popin {
     animation: fadeInFromBottom 1s ease-in-out;
+  }
+
+  
+  .popon {
+    animation: fadeInFromTop 1s ease-in-out;
   }
   
 /*view animation
