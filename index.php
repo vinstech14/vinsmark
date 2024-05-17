@@ -10,9 +10,9 @@
   <?php readfile('./global/header.html'); ?>
 </head>
 
-<body class="loginbgimg">
- <div class="container d-flex justify-content-center align-items-center vh-100 d-flex">
-    <div class="card bg-transparent blurry-background w-50" style="border-color:white;">
+<body class="generalbg">
+ <div class="container d-flex generalbg justify-content-center align-items-center vh-100 d-flex">
+    <div class="card sideback w-50 shadowbottom" style="border-color:white;">
       <div class="card-body bg-transparent" style="border-radius: 10px;">
         <div class="row">
             <div class="text-center">
