@@ -31,7 +31,7 @@
         <h3 class="text-center">
           INTERVIEW SHEET (Para sa Serbisyong-Legal at/o Representasyon)
         </h3>
-        <div class="row justify-content-center mt-2">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-6">
             <label for="region" class="form-label">Rehiyon:</label>
             <input type="text" class="form-control" id="region" name="region" />
@@ -88,7 +88,7 @@
         <h3 class="text-center">
           I. URI NG HINIHINGI NG TULONG (Para sa kawani ng PAO)
         </h3>
-        <div class="row justify-content-center mt-2">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-4">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="1" id="legalDoc" name="legalDoc" />
@@ -129,7 +129,7 @@
           II. IMPORMASYON UKOL SA APLIKANTE (Para sa aplikante/representative. Gumamit ng panibago kung higit sa isa ang
           aplikante /kliyente)
         </h3>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-6 mt-3">
             <label for="name2" class="form-label">Pangalan:</label>
             <input type="text" class="form-control" id="name2" name="name2" />
@@ -206,7 +206,7 @@
         <h3 class="text-center">
           II-A. IMPORMASYON UKOL SA REPRESENTATIVE (Pupunan kung wala ang aplikante)
         </h3>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-6 mt-3">
             <label for="name3" class="form-label">Pangalan:</label>
             <input type="text" class="form-control" id="name3" name="name3" />
@@ -246,7 +246,7 @@
         <h3 class="text-center">
           III. URI NG KASO
         </h3>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-4">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="1" id="criminal" name="criminal" />
@@ -281,7 +281,7 @@
         <h3 class="text-center">
           IV. SEKTOR NA KABILANG ANG APLIKANTE
         </h3>
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-5">
           <div class="col-md-6">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="1" id="child" name="child" />
