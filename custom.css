@@ -332,8 +332,23 @@ object {
   
 .showprev {
     animation: slideOut 0.25s ease;
-  }  
+  } 
 
+  @keyframes fadeInFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(75%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .popin {
+    animation: fadeInFromBottom 1s ease-in-out;
+  }
+  
 /*view animation
 @keyframes eye-blink {
     0%, 20%, 40%, 60%, 80%, 100% {

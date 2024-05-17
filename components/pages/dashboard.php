@@ -15,7 +15,7 @@
     <div class="col-md-3">
     <div class="card text-success mt-3">
         <div class="row align-items-center">
-            <a href="case.php" class="text-light text-center acase" style="text-decoration: none;">
+            <a href="case.php" class="text-light text-center acase popin" style="text-decoration: none;">
                 <h3><i class="fas fa-briefcase m-3"></i></h3>
             </a>
             <div class="col m-2 text-center">
@@ -39,7 +39,7 @@
 <div class="col-md-3">
     <div class="card text-success mt-3">
         <div class="row align-items-center">
-            <a href="client.php" class="text-light aclient" style="text-decoration: none;">    
+            <a href="client.php" class="text-light aclient popin" style="text-decoration: none;">    
                 <h3><i class="fas fa-user m-3"></i></h3>
             </a>
             <div class="col m-2 text-center">
@@ -63,7 +63,7 @@
 <div class="col-md-3">
     <div class="card text-success mt-3">
         <div class="row align-items-center">
-        <a href="transaction.php" class="text-light atransaction" style="text-decoration: none;">
+        <a href="transaction.php" class="text-light atransaction popin" style="text-decoration: none;">
           <h3><i class="fas fa-handshake m-3"></i></h3></a>
             <div class="col m-2 text-center">
                 <div class="row">
@@ -86,7 +86,7 @@
 <div class="col-md-3">
     <div class="card text-success mt-3">
         <div class="row align-items-center">
-            <a href="archived.php" class="text-light aarchived" style="text-decoration: none;">
+            <a href="archived.php" class="text-light aarchived popin" style="text-decoration: none;">
                 <h3><i class="fas fa-calendar-check m-3"></i></h3>
             </a>
             <div class="col m-2 text-center">
