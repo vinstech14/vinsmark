@@ -29,7 +29,7 @@
                         <input type="hidden" name="view_id" id="view_id">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal">CLOSE</button>
                     </div>
                 </form>
             </div>
@@ -57,8 +57,8 @@
                         <h4> Do you want to permanently delete this data?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb"> Yes !! Delete it.
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal"> NO </button>
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb shadowbottom"> Yes !! Delete it.
                         </button>
                     </div>
                 </form>
@@ -71,7 +71,7 @@
         <h2 class="text-start text-md-start">Archived</h2>
         <div class="row mb-2">
             <div class="col-md-4 mb-2">
-                <button type="button" class="btn btn-success sideback radiusb">Restore</button>
+                <button type="button" class="btn btn-success sideback radiusb shadowbottom">Restore</button>
             </div>
         </div>
         <div class="card" style="margin-top: 10px;">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-success sideback radiusb">Search</button>
+                                <button type="button" class="btn btn-success sideback radiusb shadowbottom">Search</button>
                             </div>
                         </div>
                 </div>

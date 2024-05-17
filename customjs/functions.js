@@ -156,3 +156,48 @@ function showlabeltop() {
   namel.style.display = name.value.trim() !== '' ? "block" : "none";
 
 }
+
+function sectionSelector(sectionstate, page, targetpage) {
+  var pageCard = document.getElementById(page);
+  var targetPageCard = document.getElementById(targetpage);
+  
+  if(sectionstate === 'next'){
+    targetPageCard.classList.remove('showprev');
+    targetPageCard.classList.add('shownext');
+    pageCard.style.display = 'none';
+    targetPageCard.style.display='block';
+  }
+  else if(sectionstate === 'prev'){
+    targetPageCard.classList.remove('shownext');
+    targetPageCard.classList.add('showprev');
+    pageCard.style.display = 'none';
+    targetPageCard.style.display='block';
+  }
+}
+
+/*
+function nextSection(current, nextpage) {
+  var currentElement = document.getElementById(current);
+  var nextElement = document.getElementById(nextpage);
+
+  nextElement.classList.add('show-next');
+  currentElement.classList.add('hide-next');
+
+  setTimeout(function() {
+    currentElement.style.display = 'none';
+    currentElement.classList.remove('hide-next');
+  }, 500); // Match the duration of the CSS transition
+}
+
+function prevSection(current, prevpage) {
+  var currentElement = document.getElementById(current);
+  var prevElement = document.getElementById(prevpage);
+
+  prevElement.classList.add('show-prev');
+  currentElement.classList.add('hide-prev');
+
+  setTimeout(function() {
+    currentElement.style.display = 'none';
+    currentElement.classList.remove('hide-prev');
+  }, 500); // Match the duration of the CSS transition
+}*/

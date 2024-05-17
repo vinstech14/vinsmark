@@ -213,8 +213,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">Close</button>
-                        <button type="submit" name="updatedata" class="btn editbg text-white radiusb">Update Data</button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal">Close</button>
+                        <button type="submit" name="updatedata" class="btn editbg text-white radiusb shadowbottom">Update Data</button>
                     </div>
                 </form>
             </div>
@@ -239,8 +239,8 @@
                         <h4> Do you want to delete this data ?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb"> Yes !! Delete it.
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal"> NO </button>
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb shadowbottom"> Yes !! Delete it.
                         </button>
                     </div>
                 </form>
@@ -355,7 +355,7 @@
                             </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">CLOSE</button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal">CLOSE</button>
                     </div>
                 </form>
 
@@ -365,7 +365,7 @@
     <div class="container-fluid">
         <h2 class="text-start text-md-start">Client</h2>
         <div style="text-align:right;">
-            <button type="button" class="btn btn-success sideback radiusb" data-toggle="modal" data-target="#addcourt">
+            <button type="button" class="btn btn-success sideback radiusb shadowbottom" data-toggle="modal" data-target="#addcourt">
                 ADD
             </button>
         </div>

@@ -7,7 +7,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="custom.css" />
   <script src="./customjs/functions.js"></script>
-  <?php readfile('./global/header.html');?>
+  <?php readfile('./global/header.html'); ?>
 </head>
 
 <body class="loginbgimg">
@@ -45,7 +45,7 @@
             </select>
           </div>
           <div class="text-center" id="lb" style="display:none;">
-            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb" name="submit" value="submit" onclick = "storeUserType()">Login</button>
+            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="submit" value="submit" onclick = "storeUserType()">Login</button>
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
             <a href="./components/signup.php">Sign up</a>
