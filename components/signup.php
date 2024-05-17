@@ -27,16 +27,16 @@
   <?php readfile('../global/header.html'); ?>
 </head>
 
-<body class="loginbgimg">
+<body>
   <div class="container d-flex justify-content-center align-items-center vh-100">
-    <div class="card bg-transparent cardw blurry-background">
-      <div class="card-body bg-transparent" style="border-radius:20px;">
+    <div class="card cardw popon">
+      <div class="card-body generalbg" style="border-radius:20px;">
         <div class="row">
-          <div class="col-md-3 text-center logos mb-3">
+          <div class="col-md-3 text-center logos mb-3 popin">
           <img src="../images/pao.png" class="rounded-circle" alt="Avatar" style="width: 120px; height: auto;" />
           </div>
-          <div class="col-md-9">
-        <div class="card generalbg">
+          <div class="col-md-9 popin">
+        <div class="card">
           <div class="text-center mt-2">
           <h2>Create account</h2>
           </div>

@@ -10,7 +10,7 @@
   <?php readfile('./global/header.html'); ?>
 </head>
 
-<body class="bg-success-subtle">
+<body>
  <div class="container d-flex justify-content-center align-items-center vh-100 d-flex">
     <div class="card generalbg w-50 shadowbottom popon" style="border-color:white;">
       <div class="card-body bg-transparent" style="border-radius: 10px;">
