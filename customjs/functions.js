@@ -117,6 +117,9 @@ function showLoginField(userType){
   var loginButton = document.getElementById("lb");
   var signuplink = document.getElementById("sul");
   var card = document.getElementById("cardl");
+  usernamediv.classList.add('popin');
+  passworddiv.classList.add('popin');
+  loginButton.classList.add('popin');
   usernamediv.style.display = 'block';
   passworddiv.style.display = 'block';
   loginButton.style.display = 'block';

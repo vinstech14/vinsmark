@@ -356,12 +356,12 @@ object {
   }
   
   .popin {
-    animation: fadeInFromBottom 1s ease-in-out;
+    animation: fadeInFromBottom 0.5s ease-in-out;
   }
 
   
   .popon {
-    animation: fadeInFromTop 1s ease-in-out;
+    animation: fadeInFromTop 0.5s ease-in-out;
   }
   
 /*view animation
