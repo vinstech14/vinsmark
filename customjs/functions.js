@@ -1,4 +1,4 @@
-function toggleScroll(direction) {
+/*function toggleScroll(direction) {
   var up = document.getElementById('scrollup');
   var down = document.getElementById('scrolldown');
   
@@ -16,6 +16,18 @@ function toggleScroll(direction) {
     });
     up.style.display = "none";
     down.style.display = "block";
+  }
+}*/
+ function toggleInterviewSheet() {
+  var children = document.getElementById("interviewSheetChildren");
+  var arrowIcon = document.getElementById("arrowIcon");
+
+  if (children.style.display === "none") {
+    children.style.display = "block";
+    arrowIcon.classList.add("open");
+  } else {
+    children.style.display = "none";
+    arrowIcon.classList.remove("open");
   }
 }
 function toggleInputState(checkbox, inputbox){
@@ -104,7 +116,12 @@ function showLoginField(userType){
   var passworddiv = document.getElementById("pw");
   var loginButton = document.getElementById("lb");
   var signuplink = document.getElementById("sul");
+  var usertype = document.getElementById("usertypediv");
   var card = document.getElementById("cardl");
+  usernamediv.classList.add('popin');
+  passworddiv.classList.add('popin');
+  loginButton.classList.add('popin');
+  usertype.classList.add('popin');
   usernamediv.style.display = 'block';
   passworddiv.style.display = 'block';
   loginButton.style.display = 'block';
@@ -144,3 +161,48 @@ function showlabeltop() {
   namel.style.display = name.value.trim() !== '' ? "block" : "none";
 
 }
+
+function sectionSelector(sectionstate, page, targetpage) {
+  var pageCard = document.getElementById(page);
+  var targetPageCard = document.getElementById(targetpage);
+  
+  if(sectionstate === 'next'){
+    targetPageCard.classList.remove('showprev');
+    targetPageCard.classList.add('shownext');
+    pageCard.style.display = 'none';
+    targetPageCard.style.display='block';
+  }
+  else if(sectionstate === 'prev'){
+    targetPageCard.classList.remove('shownext');
+    targetPageCard.classList.add('showprev');
+    pageCard.style.display = 'none';
+    targetPageCard.style.display='block';
+  }
+}
+
+/*
+function nextSection(current, nextpage) {
+  var currentElement = document.getElementById(current);
+  var nextElement = document.getElementById(nextpage);
+
+  nextElement.classList.add('show-next');
+  currentElement.classList.add('hide-next');
+
+  setTimeout(function() {
+    currentElement.style.display = 'none';
+    currentElement.classList.remove('hide-next');
+  }, 500); // Match the duration of the CSS transition
+}
+
+function prevSection(current, prevpage) {
+  var currentElement = document.getElementById(current);
+  var prevElement = document.getElementById(prevpage);
+
+  prevElement.classList.add('show-prev');
+  currentElement.classList.add('hide-prev');
+
+  setTimeout(function() {
+    currentElement.style.display = 'none';
+    currentElement.classList.remove('hide-prev');
+  }, 500); // Match the duration of the CSS transition
+}*/

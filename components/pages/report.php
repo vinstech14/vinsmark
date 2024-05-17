@@ -17,9 +17,9 @@
         <h2 class="text-start text-md-start">Reports</h2>
                     <div class="row mb-2">
                           <div class="col-md-12 mb-2">
-                            <button type="button" class="btn btn-success sideback radiusb">Copy</button>
-                            <button type="button" class="btn btn-success sideback radiusb">Excel</button> 
-                            <button type="button" class="btn btn-success sideback radiusb">PDF</button>
+                            <button type="button" class="btn btn-success sideback radiusb shadowbottom">Copy</button>
+                            <button type="button" class="btn btn-success sideback radiusb shadowbottom">Excel</button> 
+                            <button type="button" class="btn btn-success sideback radiusb shadowbottom">PDF</button>
                           </div>
                         </div>
         <div class="card" style="margin-top: 10px;">
@@ -48,7 +48,7 @@
                             </div>
                             </div>
                             <div class="col-md-2">
-                                <button type="button" class="btn btn-success sideback radiusb">Search</button>
+                                <button type="button" class="btn btn-success sideback radiusb shadowbottom">Search</button>
                             </div>
                             </div>
                         <thead>

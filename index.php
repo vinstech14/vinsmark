@@ -7,18 +7,18 @@
   <title>Login</title>
   <link rel="stylesheet" href="custom.css" />
   <script src="./customjs/functions.js"></script>
-  <?php readfile('./global/header.html');?>
+  <?php readfile('./global/header.html'); ?>
 </head>
 
-<body class="loginbgimg">
+<body class="bg-success-subtle">
  <div class="container d-flex justify-content-center align-items-center vh-100 d-flex">
-    <div class="card bg-transparent blurry-background w-50" style="border-color:white;">
+    <div class="card generalbg w-50 shadowbottom popon" style="border-color:white;">
       <div class="card-body bg-transparent" style="border-radius: 10px;">
         <div class="row">
-            <div class="text-center">
+            <div class="text-center popin">
               <img src="../images/pao.png" class="rounded-circle" alt="Avatar" style="width: 150px; height: auto;"/>
             </div>
-        <div class="card bg-light mt-3" id="cardl">
+        <div class="card bg-light mt-3 popin" id="cardl">
         <form class="mt-2" method="post" action="./functions/login.php">
           <h2 class=text-center>Login</h2>
           <div class="m-3" id="un" style="display: none;">
@@ -36,7 +36,7 @@
               </div>
           </div>
           </div>
-          <div class="m-3">
+          <div class="m-3" id="usertypediv">
             <select class="form-select text-center radiusb" id="userType" name="userType" onchange="showLoginField(this)">
               <option selected disabled>Select Type of User</option>
               <option value="Attorney">Attorney</option>
@@ -45,7 +45,7 @@
             </select>
           </div>
           <div class="text-center" id="lb" style="display:none;">
-            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb" name="submit" value="submit" onclick = "storeUserType()">Login</button>
+            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="submit" value="submit" onclick = "storeUserType()">Login</button>
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
             <a href="./components/signup.php">Sign up</a>

@@ -108,8 +108,8 @@ if(isset($_POST['submit'])){
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">Close</button>
-                        <button type="submit" name="submit" class="btn btn-success sideback radiusb">Add Data</button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal">Close</button>
+                        <button type="submit" name="submit" class="btn btn-success sideback radiusb shadowbottom">Add Data</button>
                     </div>
                 </form>
 
@@ -174,8 +174,8 @@ if(isset($_POST['submit'])){
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal">Close</button>
-                        <button type="submit" name="updatedatastaff" class="btn editbg text-white radiusb">Update Data</button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal">Close</button>
+                        <button type="submit" name="updatedatastaff" class="btn editbg text-white radiusb shadowbottom">Update Data</button>
                     </div>
                 </form>
 
@@ -205,8 +205,8 @@ if(isset($_POST['submit'])){
                         <h4> Do you want to delete this data ?</h4>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> NO </button>
-                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb">Delete it. </button>
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal"> NO </button>
+                        <button type="submit" name="deletedata" class="btn btn-danger deletebtnbg radiusb shadowbottom">Delete it. </button>
                     </div>
                 </form>
 
@@ -232,8 +232,7 @@ if(isset($_POST['submit'])){
                         <input type="hidden" name="view_id" id="view_id">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary radiusb" data-dismiss="modal"> CLOSE </button>
-                        <!-- <button type="submit" name="deletedata" class="btn btn-primary"> Yes !! Delete it. </button> -->
+                        <button type="button" class="btn btn-secondary radiusb shadowbottom" data-dismiss="modal"> CLOSE </button>
                     </div>
                 </form>
 
@@ -246,7 +245,7 @@ if(isset($_POST['submit'])){
     <div class="container-fluid">
     <h2 class="text-start text-md-start">Accounts</h2>
     <div style="text-align:right;">
-        <button type="button" class="btn btn-success sideback radiusb" data-toggle="modal" data-target="#adduser">
+        <button type="button" class="btn btn-success sideback radiusb shadowbottom" data-toggle="modal" data-target="#adduser">
             ADD
         </button>
     </div>
