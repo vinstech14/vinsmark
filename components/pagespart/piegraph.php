@@ -21,18 +21,18 @@
 
     // Generate shades of green
     const greenShades = [
-      '#F0E68C', // Khaki
-      '#D2B48C', // Tan
-      '#C3B091', // Khaki web color
-      '#CD853F', // Peru
-      '#DEB887', // BurlyWood
-      '#D2691E', // Chocolate 
-      '#8B4513', // SaddleBrown
-      '#A0522D', // Sienna
-      '#A52A2A', // Brown
-      '#6B4423', // Coffee
-      '#5C4033', // Dark Coffee
-      '#4B3621', // Extremely Coffee
+      '#7c1158', // Coffee
+      '#5ad45a', // Dark Coffee
+      '#4421af', // Extremely Coffee
+      '#e60049', 
+      '#0bb4ff', 
+      '#50e991', 
+      '#e6d800', 
+      '#9b19f5', 
+      '#ffa300', 
+      '#dc0ab4', 
+      '#b3d4ff', 
+      '#00bfa0',
     ];
 
     // Create the chart
