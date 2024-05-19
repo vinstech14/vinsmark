@@ -48,6 +48,7 @@
             <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="submit" value="submit" onclick = "storeUserType()">Login</button>
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
+          <span>Doesn't have an account?</span>
             <a href="./components/signup.php">Sign up</a>
           </div>
         </form>
