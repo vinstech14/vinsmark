@@ -7,6 +7,7 @@
   <title>InterviewSheet</title>
   <link rel="stylesheet" href="/custom.css" />
   <script src="/customjs/functions.js"></script>
+  <script src="/customjs/phil.js"></script> 
   <?php readfile('../../global/header.html'); ?>
 </head>
 
@@ -140,9 +141,35 @@
             <label for="citizenship" class="form-label">Pagkamamamayan:</label>
             <input type="text" class="form-control" id="citizenship" name="citizenship" />
 
-            <label for="address" class="form-label">Tirahan:</label>
-            <input type="text" class="form-control" id="address" name="address" />
-
+            <div class="col justify-content-center mt-1">
+            <div class="row">
+              <div class="col-md-3">
+              <label for="regions" class="form-class" >Region:</label>
+                <select id="regions" name="regions" class="form-control">
+                  <option value="" selected disabled>Select a region</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+              <label for="provinces" class="form-class" >Province:</label>
+                <select id="provinces" name="provinces" class="form-control">
+                  <option value="" selected disabled>Select a Province</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+              <label for="cities" class="form-class" >City:</label>
+                <select id="cities" name="cities" class="form-control">
+                  <option value="" selected disabled>Select a City</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+              <label for="barangays" class="form-class" >Barangay:</label>
+                <select id="barangays" name="barangays" class="form-control">
+                  <option value="" selected disabled>Select a Barangay</option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
             <label for="email" class="form-label">Email:</label>
             <input type="text" class="form-control" id="email" name="email" />
 
