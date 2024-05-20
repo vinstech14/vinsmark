@@ -41,9 +41,26 @@
           <h2>Create account</h2>
           </div>
           <form action="/functions/registeraccount.php" method="post">
-            <div class="form-group m-3" id="sname">
-              <label class="labelconf" id="namel">Full Name</label>
-              <input type="text" class="form-control bg-transparent" id="usname" placeholder="Full Name" name="sname" oninput='showlabeltop()'>
+            
+              <div class="row m-1">
+              <div class="col-md-4">
+                  <div class="form-group" id="dfname">
+                  <label class="labelconf" id="lnamel">Last Name</label>
+                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='showlabeltop()'>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="form-group" id="dmname">
+                  <label class="labelconf" id="fnamel">First Name</label>
+                  <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name" name="fname" oninput='showlabeltop()'>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="form-group" id="dlname">
+                  <label class="labelconf" id="mnamel">Middle Name</label>
+                  <input type="text" class="form-control bg-transparent" id="mname" placeholder="Middle Name" name="mname" oninput='showlabeltop()'>
+                  </div>
+              </div>
             </div>
             <div class="form-group m-3" id="semail">
             <label class="labelconf" id="emaill">Email</label>
@@ -71,8 +88,20 @@
               </div>
           </div>
             </div>
+            <div class="row m-1">
+              <div class="col-md-3 text-start" id="getcode">
+                  <button type="button" class="btn btn-success sideback radiusb shadowbottom" id="gcodebtn">Get v-code</button>
+                </div>
+              <div class="col-md-9">
+                <div class="form-group" id="dvcode">
+                <label class="labelconf" id="vcodel">Verification Code</label>
+                <input type="text" class="form-control bg-transparent" id="vcode" placeholder="Verification Code" name="vcode" oninput='showlabeltop()' disabled>
+                </div>
+              </div>
+              <p class="text-center mt-3" id="plschck" style="display:none;">Verification code was sent to your email </p>
+            </div>
             <div class="text-center" id="sbutton">
-              <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="ssubmit" value="submit">Create</button>
+              <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="ssubmit" value="submit" disabled>Create</button>
             </div>
             <div class="text-center mb-3" id="sl">
             <span>Already have an account?</span>

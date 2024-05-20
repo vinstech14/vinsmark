@@ -148,17 +148,26 @@ document.getElementById(id).addEventListener('click', function() {
 
 function showlabeltop() {
   var email = document.getElementById("email");
-  var name = document.getElementById("usname");
+  var fname = document.getElementById("fname");
+  var mname = document.getElementById("mname");
+  var lname = document.getElementById("lname");
   var pass = document.getElementById("password");
   var cpass = document.getElementById("confirm_password");
-  var namel = document.getElementById("namel");
+  var vcode = document.getElementById("vcode");
+  var vcodel = document.getElementById("vcodel");
+  var fnamel = document.getElementById("fnamel");
+  var mnamel = document.getElementById("mnamel");
+  var lnamel = document.getElementById("lnamel");
   var emaill = document.getElementById("emaill");
   var passl = document.getElementById("passl");
   var cpassl = document.getElementById("cpassl");
   passl.style.display = pass.value.trim() !== '' ? "block" : "none";
   emaill.style.display = email.value.trim() !== '' ? "block" : "none";
   cpassl.style.display = cpass.value.trim() !== '' ? "block" : "none";
-  namel.style.display = name.value.trim() !== '' ? "block" : "none";
+  fnamel.style.display = fname.value.trim() !== '' ? "block" : "none";
+  mnamel.style.display = mname.value.trim() !== '' ? "block" : "none";
+  lnamel.style.display = lname.value.trim() !== '' ? "block" : "none";
+  vcodel.style.display = vcode.value.trim() !== '' ? "block" : "none";
 
 }
 
