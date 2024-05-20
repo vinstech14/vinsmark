@@ -1,7 +1,7 @@
 <?php
 require_once("../database/databasecon.php");
 require_once("functions.php");
-require '../vendor/autoload.php'; // Include PHPMailer autoload file
+require_once("../vendor/autoload.php"); // Include PHPMailer autoload file
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
