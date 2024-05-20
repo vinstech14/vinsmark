@@ -40,7 +40,7 @@
           <div class="text-center mt-2">
           <h2>Create account</h2>
           </div>
-          <form method="post">
+          <form action="/functions/registeraccount.php" method="post">
             <div class="form-group m-3" id="sname">
               <label class="labelconf" id="namel">Full Name</label>
               <input type="text" class="form-control bg-transparent" id="usname" placeholder="Full Name" name="sname" oninput='showlabeltop()'>
