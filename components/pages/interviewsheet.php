@@ -36,7 +36,7 @@
           <div class="col-md-6">
             <label for="region" class="form-label">Rehiyon:</label>
             <select id="region" name="region" class="form-control">
-                                        <option selected disabled>Rehiyon</option>
+                                        <option selected disabled value="">Rehiyon</option>
                                         <option value="Region I">Region I</option>
                                         <option value="Region II">Region II</option>
                                         <option value="Region III">Region III</option>
@@ -235,7 +235,7 @@
               <div class="col-md-4">
                 <label for="sex" class="form-label">Sex:</label>
                 <select id="sex" name="sex" class="form-control">
-                                        <option selected disabled>Sex</option>
+                                        <option selected disabled value="">Sex</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
@@ -243,7 +243,7 @@
               <div class="col-md-4">
                 <label for="civilStatus" class="form-label">Civil Status:</label>
                 <select id="civilStatus" name="civilStatus" class="form-control">
-                                        <option selected disabled>Civil Status</option>
+                                        <option selected disabled value="">Civil Status</option>
                                         <option value="Single">Single</option>
                                         <option value="Married">Married</option>
                                         <option value="Divorced">Divorced</option>
