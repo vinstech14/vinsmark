@@ -158,12 +158,10 @@
 
             <label for="citizenship" class="form-label">Pagkamamamayan:</label>
             <input type="text" class="form-control" id="citizenship" name="citizenship" />
-
-            <div class="col justify-content-center mt-1">
             <div class="row">
               <div class="col-md-3">
-              <label for="regions" class="form-label" >Region:</label>
-                <select id="regions" name="regions" class="form-control">
+              <label for="regions" class="form-label">Region:</label>
+              <select id="regions" name="regions" class="form-control">
                   <option value="" selected disabled>Region</option>
                   <option value="Region I">Region I</option>
                   <option value="Region II">Region II</option>
@@ -185,26 +183,24 @@
                 </select>
               </div>
               <div class="col-md-3">
-              <label for="provinces" class="form-class" >Province:</label>
+              <label for="provinces" class="form-label" >Province:</label>
                 <select id="provinces" name="provinces" class="form-control">
                   <option value="" selected disabled>Province</option>
                 </select>
               </div>
               <div class="col-md-3">
-              <label for="cities" class="form-class" >City:</label>
+              <label for="cities" class="form-label" >City:</label>
                 <select id="cities" name="cities" class="form-control">
                   <option value="" selected disabled>City</option>
                 </select>
               </div>
               <div class="col-md-3">
-              <label for="barangays" class="form-class" >Barangay:</label>
+              <label for="barangays" class="form-label" >Barangay:</label>
                 <select id="barangays" name="barangays" class="form-control">
                   <option value="" selected disabled>Barangay</option>
                 </select>
               </div>
             </div>
-            
-          </div>
             <label for="email" class="form-label">Email:</label>
             <input type="text" class="form-control" id="email" name="email" />
 
