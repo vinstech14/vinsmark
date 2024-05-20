@@ -162,27 +162,44 @@
             <div class="col justify-content-center mt-1">
             <div class="row">
               <div class="col-md-3">
-              <label for="regions" class="form-class" >Region:</label>
+              <label for="regions" class="form-label" >Region:</label>
                 <select id="regions" name="regions" class="form-control">
-                  <option value="" selected disabled>Select a region</option>
+                  <option value="" selected disabled>Region</option>
+                  <option value="Region I">Region I</option>
+                  <option value="Region II">Region II</option>
+                  <option value="Region III">Region III</option>
+                  <option value="Region IV-A">Region IV-A</option>
+                  <option value="MIMAROPA">MIMAROPA</option>
+                  <option value="Region V">Region V</option>
+                  <option value="Region VI">Region VI</option>
+                  <option value="Region VII">Region VII</option>
+                  <option value="Region VIII">Region VIII</option>
+                  <option value="Region IX">Region IX</option>
+                  <option value="Region X">Region X</option>
+                  <option value="Region XI">Region XI</option>
+                  <option value="Region XII">Region XII</option>
+                  <option value="Region XIII">Region XIII</option>
+                  <option value="NCR">NCR</option>
+                  <option value="CAR">CAR</option>
+                  <option value="BRMM">BRMM</option>
                 </select>
               </div>
               <div class="col-md-3">
               <label for="provinces" class="form-class" >Province:</label>
                 <select id="provinces" name="provinces" class="form-control">
-                  <option value="" selected disabled>Select a Province</option>
+                  <option value="" selected disabled>Province</option>
                 </select>
               </div>
               <div class="col-md-3">
               <label for="cities" class="form-class" >City:</label>
                 <select id="cities" name="cities" class="form-control">
-                  <option value="" selected disabled>Select a City</option>
+                  <option value="" selected disabled>City</option>
                 </select>
               </div>
               <div class="col-md-3">
               <label for="barangays" class="form-class" >Barangay:</label>
                 <select id="barangays" name="barangays" class="form-control">
-                  <option value="" selected disabled>Select a Barangay</option>
+                  <option value="" selected disabled>Barangay</option>
                 </select>
               </div>
             </div>
