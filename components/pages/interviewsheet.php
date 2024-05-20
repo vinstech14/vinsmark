@@ -34,8 +34,26 @@
         <div class="row justify-content-center mt-5">
           <div class="col-md-6">
             <label for="region" class="form-label">Rehiyon:</label>
-            <input type="text" class="form-control" id="region" name="region" />
-
+            <select id="region" name="region" class="form-control">
+                                        <option selected disabled>Rehiyon</option>
+                                        <option value="Region I">Region I</option>
+                                        <option value="Region II">Region II</option>
+                                        <option value="Region III">Region III</option>
+                                        <option value="Region IV-A">Region IV-A</option>
+                                        <option value="MIMAROPA">MIMAROPA</option>
+                                        <option value="Region V">Region V</option>
+                                        <option value="Region VI">Region VI</option>
+                                        <option value="Region VII">Region VII</option>
+                                        <option value="Region VIII">Region VIII</option>
+                                        <option value="Region IX">Region IX</option>
+                                        <option value="Region X">Region X</option>
+                                        <option value="Region XI">Region XI</option>
+                                        <option value="Region XII">Region XII</option>
+                                        <option value="Region XIII">Region XIII</option>
+                                        <option value="NCR">NCR</option>
+                                        <option value="CAR">CAR</option>
+                                        <option value="BRMM">BRMM</option>
+                </select>
             <label for="do" class="form-label">District Office:</label>
             <input type="text" class="form-control" id="do" name="do" />
 
@@ -176,11 +194,21 @@
               </div>
               <div class="col-md-4">
                 <label for="sex" class="form-label">Sex:</label>
-                <input type="text" class="form-control" id="sex" name="sex" />
+                <select id="sex" name="sex" class="form-control">
+                                        <option selected disabled>Sex</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
               </div>
               <div class="col-md-4">
                 <label for="civilStatus" class="form-label">Civil Status:</label>
-                <input type="text" class="form-control" id="civilStatus" name="civilStatus" />
+                <select id="civilStatus" name="civilStatus" class="form-control">
+                                        <option selected disabled>Civil Status</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Widowed">Widowed</option>
+                </select>
               </div>
             </div>
             <label for="degree" class="form-label">Naabot na ag-aaral:</label>
@@ -225,11 +253,21 @@
               </div>
               <div class="col-md-4">
                 <label for="sex2" class="form-label">Sex:</label>
-                <input type="text" class="form-control" id="sex2" name="sex2" />
+                <select id="sex2" name="sex2" class="form-control">
+                                        <option selected disabled>Sex</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
               </div>
               <div class="col-md-4">
                 <label for="civilStat2" class="form-label">Civil Status:</label>
-                <input type="text" class="form-control" id="civilStat2" name="civilStat2" />
+                <select id="civilStat2" name="civilStat2" class="form-control">
+                                        <option selected disabled>Civil Status</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Married">Married</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Widowed">Widowed</option>
+                </select>
               </div>
             </div>
             <label for="contactNo2" class="form-label">Contact No.:</label>
