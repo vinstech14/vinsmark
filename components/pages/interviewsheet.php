@@ -7,7 +7,13 @@
   <title>InterviewSheet</title>
   <link rel="stylesheet" href="/custom.css" />
   <script src="/customjs/functions.js"></script>
-  <script src="/customjs/phil.js"></script> 
+  <script src="reg.js"></script>
+   <script src="/customjs/reg.js"></script>
+  
+
+
+ 
+
   <?php readfile('../../global/header.html'); ?>
 </head>
 
@@ -153,16 +159,8 @@
             <label for="name2" class="form-label">Pangalan:</label>
             <input type="text" class="form-control" id="name2" name="name2" />
 
-            <label for="religion" class="form-label">Religion:</label>
-            <select id="region" name="religion" class="form-control">
-                <option selected disabled value="">Religion</option>
-                          <option value="Roman Catholic">Roman Catholic</option>
-                          <option value="Islam">Islam</option>
-                          <option value="Iglesia Ni Cristo">Iglesia Ni Cristo</option>
-                          <option value="Protestant">Protestant</option>
-                          </select>         
-          
-          
+            <label for="religion" class="form-label">Relihiyon:</label>
+            <input type="text" class="form-control" id="religion" name="religion" />
 
             <label for="citizenship" class="form-label">Pagkamamamayan:</label>
             <input type="text" class="form-control" id="citizenship" name="citizenship" />
@@ -171,23 +169,7 @@
               <label for="regions" class="form-label">Region:</label>
               <select id="regions" name="regions" class="form-control">
                   <option value="" selected disabled>Region</option>
-                  <option value="Region I">Region I</option>
-                  <option value="Region II">Region II</option>
-                  <option value="Region III">Region III</option>
-                  <option value="Region IV-A">Region IV-A</option>
-                  <option value="MIMAROPA">MIMAROPA</option>
-                  <option value="Region V">Region V</option>
-                  <option value="Region VI">Region VI</option>
-                  <option value="Region VII">Region VII</option>
-                  <option value="Region VIII">Region VIII</option>
-                  <option value="Region IX">Region IX</option>
-                  <option value="Region X">Region X</option>
-                  <option value="Region XI">Region XI</option>
-                  <option value="Region XII">Region XII</option>
-                  <option value="Region XIII">Region XIII</option>
-                  <option value="NCR">NCR</option>
-                  <option value="CAR">CAR</option>
-                  <option value="BRMM">BRMM</option>
+                
                 </select>
               </div>
               <div class="col-md-3">
