@@ -28,7 +28,7 @@ function sendVerificationEmail($email, $verification_code) {
         $mail->Body    = "Verification Code: '$verification_code'";
 
         $mail->send();
-        echo 'Verification email has been sent';
+        echo $verification_code;
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }

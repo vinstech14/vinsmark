@@ -1,21 +1,34 @@
 <?php
 require_once("../database/databasecon.php");
 require_once("functions.php");
-require_once("mailer.php");
 
 if(isset($_POST['ssubmit'])){
-    $name = $_POST['sname'];
+    $fname = $_POST['fname'];
+    $mname = $_POST['mname'];
+    $lname = $_POST['lname'];
+    $name = $fname . ' ' . $mname . ' ' . $lname;
     $email = $_POST['email'];
     $password = $_POST['spword'];
-    $confirmpw = $_POST['scpword'];
     $vcinput = $_POST['vcode'];
+    $vcinputconfirm = $_POST['vcname'];
     $table = 'accounts';
     $columns = ['name', 'email', 'password', 'usertype'];
      // Generate a verification code
     $data = [$name, $email, $password, 'Client'];
     
-    if($password === $confirmpw) {
-        
+    if($vcinput === $vcinputconfirm){
+        if(saveData($conn, $table, $columns, $data))
+            header("location: ../components/main.php");
     }
-}
+    else {
+        header("location: ../components/signup.php");
+        echo '<script>
+                var checkl = document.getElementById("plschck");
+                checkl.disabled = false;
+                checkl.innerText = "Incorrect Verification Code";
+            </script>';
+           
+    }
+    }
+
 ?>

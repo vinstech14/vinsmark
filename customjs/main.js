@@ -9,7 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const {imageSrc} = userInfo[userType] || {};
 
     if (imageSrc) {
-        document.getElementById("type").innerText = userType;
+        const nameTag = localStorage.getItem('nameTag');
+        if(nameTag !== null || nameTag !=='')
+            document.getElementById("type").innerText = nameTag;
+        else
+            document.getElementById("type").innerText = userType;
         document.getElementById("imageprofile").src = imageSrc;
     }
     popupnotif();

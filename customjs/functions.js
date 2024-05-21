@@ -147,28 +147,35 @@ document.getElementById(id).addEventListener('click', function() {
 }
 
 function showlabeltop() {
-  var email = document.getElementById("email");
-  var fname = document.getElementById("fname");
-  var mname = document.getElementById("mname");
-  var lname = document.getElementById("lname");
+  const fields = [
+    { input: 'email', label: 'emaill' },
+    { input: 'fname', label: 'fnamel' },
+    { input: 'mname', label: 'mnamel' },
+    { input: 'lname', label: 'lnamel' },
+    { input: 'password', label: 'passl' },
+    { input: 'vcode', label: 'vcodel' }
+  ];
+
+  fields.forEach(field => {
+    const input = document.getElementById(field.input);
+    const label = document.getElementById(field.label);
+    label.style.display = input.value.trim() !== '' ? 'block' : 'none';
+  });
+}
+
+function passfieldcombo(){
   var pass = document.getElementById("password");
   var cpass = document.getElementById("confirm_password");
-  var vcode = document.getElementById("vcode");
-  var vcodel = document.getElementById("vcodel");
-  var fnamel = document.getElementById("fnamel");
-  var mnamel = document.getElementById("mnamel");
-  var lnamel = document.getElementById("lnamel");
-  var emaill = document.getElementById("emaill");
-  var passl = document.getElementById("passl");
   var cpassl = document.getElementById("cpassl");
-  passl.style.display = pass.value.trim() !== '' ? "block" : "none";
-  emaill.style.display = email.value.trim() !== '' ? "block" : "none";
+  var gcode = document.getElementById("gcodebtn");
   cpassl.style.display = cpass.value.trim() !== '' ? "block" : "none";
-  fnamel.style.display = fname.value.trim() !== '' ? "block" : "none";
-  mnamel.style.display = mname.value.trim() !== '' ? "block" : "none";
-  lnamel.style.display = lname.value.trim() !== '' ? "block" : "none";
-  vcodel.style.display = vcode.value.trim() !== '' ? "block" : "none";
 
+  if(pass.value === cpass.value){
+    gcode.disabled = false;
+  }
+  else{
+    gcode.disabled = true;
+  }
 }
 
 function sectionSelector(sectionstate, page, targetpage) {
