@@ -105,7 +105,6 @@
 </script>
 <script>
     $(document).ready(function () {
-    
     $('.gcodebtn').on('click', function () {
       const email = $('#email').val();
       var checkl = document.getElementById('plschck');
