@@ -140,17 +140,17 @@
   function checkEmail() {
       var email = document.getElementById("email").value;
       var emaill = document.getElementById("emaill");
+      var vcodebtn =document.getElementById("gcodebtn");
       $.ajax({
         url: "../receivedapi/checkduplicate.php",
         type: "POST",
         data: { data1: email, column1:'email' ,t: 'accounts' },
         success: function(response) {
           const result = JSON.parse(response);
-          if(result.status === 'exists'){
+          if(result.status === 'exists')
             emaill.innerText = 'Email already exists';
-          }else{
+          else
             emaill.innerText = 'Email';
-          }
         },
         error: function(xhr, status, error) {
           console.error(xhr.responseText);
