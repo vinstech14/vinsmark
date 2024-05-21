@@ -153,8 +153,16 @@
             <label for="name2" class="form-label">Pangalan:</label>
             <input type="text" class="form-control" id="name2" name="name2" />
 
-            <label for="religion" class="form-label">Relihiyon:</label>
-            <input type="text" class="form-control" id="religion" name="religion" />
+            <label for="religion" class="form-label">Religion:</label>
+            <select id="region" name="religion" class="form-control">
+                <option selected disabled value="">Religion</option>
+                          <option value="Roman Catholic">Roman Catholic</option>
+                          <option value="Islam">Islam</option>
+                          <option value="Iglesia Ni Cristo">Iglesia Ni Cristo</option>
+                          <option value="Protestant">Protestant</option>
+                          </select>         
+          
+          
 
             <label for="citizenship" class="form-label">Pagkamamamayan:</label>
             <input type="text" class="form-control" id="citizenship" name="citizenship" />
