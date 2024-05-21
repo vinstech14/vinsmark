@@ -47,7 +47,7 @@
             </div>
             <div class="form-group m-3" id="semail">
             <label class="labelconf" id="emaill">Email</label>
-              <input type="email" class="form-control bg-transparent" id="email" placeholder="Email" name="email" oninput='showlabeltop()'>
+              <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email" name="email" oninput='checkEmail()'>
             </div>
             <div class="form-group m-3" id="spassword">
             <label class="labelconf" id="passl">Password</label>
@@ -136,6 +136,28 @@
 });
 });
 </script>
-
+<script>
+  function checkEmail() {
+      var email = document.getElementById("email").value;
+      var emaill = document.getElementById("emaill");
+      $.ajax({
+        url: "../receivedapi/checkduplicate.php",
+        type: "POST",
+        data: { data1: email, column1:'email' ,t: 'accounts' },
+        success: function(response) {
+          const result = JSON.parse(response);
+          if(result.status === 'exists'){
+            emaill.innerText = 'Email already exists';
+          }else{
+            emaill.innerText = 'Email';
+          }
+        },
+        error: function(xhr, status, error) {
+          console.error(xhr.responseText);
+        }
+      });
+      showlabeltop();
+    }
+</script>
 </body>
 </html>
