@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pao</title>
-  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="../customcss/custom.css" />
   <script src="../customjs/linkpage.js"></script>
   <script src="../customjs/functions.js"></script>
   <script src="../customjs/sidebar.js"></script>
@@ -27,7 +27,7 @@
           <div class="d-flex align-items-center justify-content-center">
             <div class="col d-flex flex-column align-items-center">
               <div class="row">
-                <img src="../images/pao.png" class="rounded-circle logores" alt="Avatar" style="width: 120px; height: auto;" />
+                <img src="/images/pao.png" class="rounded-circle logores" alt="Avatar" style="width: 120px; height: auto;" />
               </div>
               <div class="row mt-2">
                 <span class="d-none d-sm-inline text-white">Public Attorney's Office</span>
@@ -116,7 +116,7 @@
         </div>
         <div class="row">
           <div id="panel" class="p-0">
-            <object id="dashid" type="text/html" data="./pages/dashboard.php"
+            <object id="dashid" type="text/html" data="/pages/dashboard.php"
               style="width: 100%; height:92vh"></object>
           </div>
         </div>
