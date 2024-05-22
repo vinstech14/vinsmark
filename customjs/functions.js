@@ -103,6 +103,8 @@ function storeUserType(){
   var userType = document.getElementById("userType").value;
   // Store userType in localStorage
   localStorage.setItem('userType', userType);
+  // Store name
+  localStorage.setItem('nameTag', 'To be develop')
 }
 
 function changeloginfield(usertype){
