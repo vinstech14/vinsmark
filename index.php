@@ -5,9 +5,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
-  <link rel="stylesheet" href="customcss/custom.css" />
-  <script src="customjs/functions.js"></script>
-  <?php readfile('global/header.html'); ?>
+  <?php readfile('./global/header.html'); ?>
+  <link rel="stylesheet" href="./customcss/custom.css" />
+  <script src="./customjs/functions.js"></script>
+  
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       <div class="card-body bg-transparent" style="border-radius: 10px;">
         <div class="row">
             <div class="text-center popin">
-              <img src="images/pao.png" class="rounded-circle" alt="Avatar" style="width: 150px; height: auto;"/>
+              <img src="./images/pao.png" class="rounded-circle" alt="Avatar" style="width: 150px; height: auto;"/>
             </div>
         <div class="card bg-light mt-3 popin" id="cardl">
         <form class="mt-2" method="post" action="./functions/login.php">
@@ -49,7 +50,7 @@
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
           <span>Doesn't have an account?</span>
-            <a href="components/signup.php">Sign up</a>
+            <a href="./components/signup.php">Sign up</a>
           </div>
         </form>
         </div>

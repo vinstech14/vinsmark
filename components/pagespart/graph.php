@@ -7,7 +7,7 @@
   <title>Case Graph</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
-  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="/customcss/custom.css" />
 </head>
 
 <body>

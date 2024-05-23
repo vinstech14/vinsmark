@@ -5,8 +5,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard</title>
-  <link rel="stylesheet" href="../../customcss/custom.css" />
   <?php readfile('../../global/header.html');?>
+  <link rel="stylesheet" href="/customcss/custom.css" />
 </head>
 
 <body class="generalbg">

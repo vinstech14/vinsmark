@@ -4,12 +4,11 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>InterviewSheet</title>
-      <link rel="stylesheet" href="../../custom.css/custom.css" />
-      <script src="../../customjs/functions.js"></script>
-      <script src="../../customjs/phil.js"></script> 
-      <script src="../../customjs/main.js"></script> 
-
       <?php readfile('../../global/header.html'); ?>
+      <link rel="stylesheet" href="/custom.css/custom.css" />
+      <script src="/customjs/functions.js"></script>
+      <script src="/customjs/phil.js"></script> 
+      <script src="/customjs/main.js"></script> 
    </head>
    <style>
         .hidden {
@@ -38,7 +37,7 @@
          </div>
          </div>-->
       <div class="container p-2">
-         <form method="post" action="../../functions/save.php">
+         <form method="post" action="">
             <div class="card p-5 shadowbottom" id="section1">
                <h3 class="text-center">
                   INTERVIEW SHEET (Para sa Serbisyong-Legal at/o Representasyon)
