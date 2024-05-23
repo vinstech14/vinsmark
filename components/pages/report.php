@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
-    <link rel="stylesheet" href="/custom.css" />
+    <link rel="stylesheet" href="../../customcss/custom.css" />
 </head>
 
 <body class="generalbg">

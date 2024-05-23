@@ -10,10 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (imageSrc) {
         const nameTag = localStorage.getItem('nameTag');
-        if(nameTag !== null || nameTag !=='')
-            document.getElementById("type").innerText = nameTag;
-        else
-            document.getElementById("type").innerText = userType;
+        document.getElementById("type").innerText = nameTag;
+        
         document.getElementById("imageprofile").src = imageSrc;
     }
     popupnotif();
