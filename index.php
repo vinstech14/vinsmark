@@ -46,7 +46,7 @@
             </select>
           </div>
           <div class="text-center" id="lb" style="display:none;">
-            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="submit" value="submit" onclick = "storeUserType()">Login</button>
+            <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom loginbtn" name="submit" value="submit" onclick = "storeUserType()">Login</button>
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
           <span>Doesn't have an account?</span>
@@ -60,6 +60,29 @@
 </div>
 <script> 
   toggleP('togglepassword', 'password');
+</script>
+
+<script>
+    $(document).ready(function () {
+
+    $('.loginbtn').on('click', function () {
+      var email = document.getElementById('email').value;
+      var usertype = document.getElementById('userType').value;
+      $.ajax({
+        url: "../receivedapi/searching.php",
+        type: "POST",
+        data: {d1: email, d2: usertype, c1:'email', c2:'usertype', t:'accounts'},
+        success: function(response) {
+          const result = JSON.parse(response);
+          cosole.log(result);
+        },
+        error: function(xhr, status, error) {
+          console.error(xhr.responseText);
+        }
+      });
+      showlabeltop();
+    });
+  });
 </script>
 
 </body>
