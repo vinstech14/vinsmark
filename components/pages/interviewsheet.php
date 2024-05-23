@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>InterviewSheet</title>
       <?php readfile('../../global/header.html'); ?>
-      <link rel="stylesheet" href="/custom.css/custom.css" />
+      <link rel="stylesheet" href="/customcss/custom.css" />
       <script src="/customjs/functions.js"></script>
       <script src="/customjs/phil.js"></script> 
       <script src="/customjs/main.js"></script> 
