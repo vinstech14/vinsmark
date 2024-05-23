@@ -150,20 +150,26 @@ document.getElementById(id).addEventListener('click', function() {
 
 function showlabeltop() {
   const fields = [
-    { input: 'email', label: 'emaill' },
+    { input: 'email', label: 'emaill'},
+    { input: 'password', label: 'passl'},
     { input: 'fname', label: 'fnamel' },
     { input: 'mname', label: 'mnamel' },
     { input: 'lname', label: 'lnamel' },
-    { input: 'password', label: 'passl' },
     { input: 'vcode', label: 'vcodel' }
   ];
 
   fields.forEach(field => {
     const input = document.getElementById(field.input);
     const label = document.getElementById(field.label);
-    label.style.display = input.value.trim() !== '' ? 'block' : 'none';
+
+    if (input.value.trim() !== '')
+      label.style.display = 'block';
+    else 
+      label.style.display = 'none';
+    
   });
 }
+
 
 function passfieldcombo(){
   var pass = document.getElementById("password");
