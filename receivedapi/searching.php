@@ -1,6 +1,6 @@
 <?php
-require_once("/database/databasecon.php");
-require_once("/functions/functions.php");
+require_once("../database/databasecon.php");
+require_once("../functions/functions.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve the data sent from the HTML page

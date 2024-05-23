@@ -52,7 +52,7 @@
             <div class="form-group m-3" id="spassword">
             <label class="labelconf" id="passl">Password</label>
               <div class="input-group">
-              <input type="password" class="form-control bg-transparent passfield" id="password" placeholder="Password" name="spword" oninput='showlabeltop()'>
+              <input type="password" class="form-control bg-transparent" id="password" placeholder="Password" name="spword" oninput='showlabeltop()'>
               <div class="input-group-append">
                   <span class="input-group-text bg-transparent eyeborder">
                       <i class="fas fa-eye-slash" id="togglespassword"></i>
