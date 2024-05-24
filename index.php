@@ -69,12 +69,12 @@
       var email = document.getElementById('email').value;
       var usertype = document.getElementById('userType').value;
       $.ajax({
-        url: "../receivedapi/searching.php",
+        url: "./receivedapi/searching.php",
         type: "POST",
         data: {d1: email, d2: usertype, c1:'email', c2:'usertype', t:'accounts'},
         success: function(response) {
           const result = JSON.parse(response);
-          cosole.log(result);
+          localStorage.setItem('nameTag', result[0].name);
         },
         error: function(xhr, status, error) {
           console.error(xhr.responseText);

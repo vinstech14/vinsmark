@@ -30,19 +30,19 @@
               <div class="col-md-4">
                   <div class="form-group" id="dfname">
                   <label class="labelconf" id="lnamel">Last Name</label>
-                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='showlabeltop()'>
+                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='othershowlabeltop()'>
                   </div>
               </div>
               <div class="col-md-4">
                   <div class="form-group" id="dmname">
                   <label class="labelconf" id="fnamel">First Name</label>
-                  <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name" name="fname" oninput='showlabeltop()'>
+                  <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name" name="fname" oninput='othershowlabeltop()'>
                   </div>
               </div>
               <div class="col-md-4">
                   <div class="form-group" id="dlname">
                   <label class="labelconf" id="mnamel">Middle Name</label>
-                  <input type="text" class="form-control bg-transparent" id="mname" placeholder="Middle Name" name="mname" oninput='showlabeltop()'>
+                  <input type="text" class="form-control bg-transparent" id="mname" placeholder="Middle Name" name="mname" oninput='othershowlabeltop()'>
                   </div>
               </div>
             </div>
@@ -79,7 +79,7 @@
               <div class="col-md-9">
                 <div class="form-group" id="dvcode">
                 <label class="labelconf" id="vcodel">Verification Code</label>
-                <input type="text" class="form-control bg-transparent" id="vcode" placeholder="Verification Code" name="vcode" oninput='showlabeltop()' disabled>
+                <input type="text" class="form-control bg-transparent" id="vcode" placeholder="Verification Code" name="vcode" oninput='othershowlabeltop()' disabled>
                 </div>
               </div>
               <p class="text-center mt-3 mb-0" id="plschck" style="display:none;"></p>
