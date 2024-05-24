@@ -38,7 +38,14 @@
          </div>-->
       <div class="container p-2">
          <form method="post" action="">
-            <div class="card p-5 shadowbottom" id="section1">
+         <div class="card p-5 shadowbottom" id="section1">
+               <h3 class="text-center">Purpose</h3>
+               <div class="row justify-content-center mt-3">
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-paper-plane text-white m-2"></i>Notarize</button>
+               </div>
+            </div>
+            <div class="card p-5 section shadowbottom" id="section2">
                <h3 class="text-center">
                   INTERVIEW SHEET (Para sa Serbisyong-Legal at/o Representasyon)
                </h3>
@@ -107,10 +114,12 @@
                         <input type="text" class="form-control" id="iothers" name="iothers" disabled />
                      </div>
                   </div>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')">Next</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section2', 'section1')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section2', 'section3')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
+                  
                </div>
             </div>
-            <div class="card p-5 section shadowbottom" id="section2">
+            <div class="card p-5 section shadowbottom" id="section3">
                <h3 class="text-center">
                   I. URI NG HINIHINGI NG TULONG (Para sa kawani ng PAO)
                </h3>
@@ -146,11 +155,11 @@
                         <input type="text" class="form-control" id="iothers2" name="iothers2" disabled />
                      </div>
                   </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section2', 'section1')">Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section2', 'section3')">Next</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section3', 'section2')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section3', 'section4')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
                </div>
             </div>
-            <div class="card p-5 section shadowbottom" id="section3">
+            <div class="card p-5 section shadowbottom" id="section4">
                <h3 class="text-center">
                   II. IMPORMASYON UKOL SA APLIKANTE (Para sa aplikante/representative. Gumamit ng panibago kung higit sa isa ang
                   aplikante /kliyente)
@@ -470,11 +479,11 @@
                         <option value="" >Igacos</option>
                      </select>
                   </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section3','section2')">Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section3','section4')">Next</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section4','section3')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section4','section5')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
                </div>
             </div>
-            <div class="card p-5 section shadowbottom" id="section4">
+            <div class="card p-5 section shadowbottom" id="section5">
                <h3 class="text-center">
                   II-A. IMPORMASYON UKOL SA REPRESENTATIVE (Pupunan kung wala ang aplikante)
                </h3>
@@ -517,11 +526,11 @@
                      <label for="email2" class="form-label">Email:</label>
                      <input type="text" class="form-control" id="email2" name="email2" />
                   </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section4', 'section3')">Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section4', 'section5')">Next</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section5', 'section4')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section5', 'section6')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
                </div>
             </div>
-            <div class="card p-5 section shadowbottom" id="section5">
+            <div class="card p-5 section shadowbottom" id="section6">
                <h3 class="text-center">
                   III. URI NG KASO
                </h3>
@@ -552,11 +561,11 @@
                         <label class="form-check-label" for="labor">Labor</label>
                      </div>
                   </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section5', 'section4')">Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section5', 'section6')">Next</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section6', 'section5')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section6', 'section7')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
                </div>
             </div>
-            <div class="card p-5 section shadowbottom" id="section6">
+            <div class="card p-5 section shadowbottom" id="section7">
                <h3 class="text-center">
                   IV. SEKTOR NA KABILANG ANG APLIKANTE
                </h3>
@@ -661,16 +670,8 @@
                         <input type="text" class="form-control" id="ipvr" name="ipvr" disabled />
                      </div>
                   </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section6', 'section5')">Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section6', 'section7')">Next</button>
-               </div>
-            </div>
-            <div class="card p-5 section shadowbottom" id="section7">
-               <h3 class="text-center">Purpose</h3>
-               <div class="row justify-content-center mt-3">
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section7', 'section6')">Previous</button>
-                  <button type="submit" class="btn btn-success sideback w-25 m-3 shadowbottom" name="submitnotarize" value="notarize">Notarize</button>
-                  <button type="submit" class="btn btn-success sideback w-25 m-3 shadowbottom" name="submitadmission" value="advice">Advice</button>
+                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section7', 'section6')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
+                  <button type="submit" name="submitbtn" class="btn btn-success sideback w-25 m-3 shadowbottom"><i class="fas fa-paper-plane text-white m-2"></i>Submit</button>
                </div>
             </div>
          </form>
