@@ -107,7 +107,7 @@
                   </h5>
                 </a>
                 <a class="d-flex text-decoration-none text-success">
-                  <img alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; border-radius: 10%;"
+                  <img alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; border: 2px solid #0f5233;"
                     id="imageprofile" />
                   <span class="fs-6 d-none d-sm-inline m-1" id="type">Type</span>
                 </a>
