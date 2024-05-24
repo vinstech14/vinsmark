@@ -43,13 +43,20 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Party Represented:</label>
-                                    <input type="text" class="form-control" name="apartyrepresented"
-                                        id="apartyrepresented" placeholder="Party Represented">
+                                    <label class="form-label">Party Represented:</label>                                  
+                                        <select id="apartyrepresented" name="apartyrepresented" class="form-control">
+                                            <option disabled selected>Party Represented</option>
+                                            <option value="accused">Accused</option>
+                                            <option value="respondents">Respondents</option>
+                                            <option value="defendants">defendants</option>
+                                            <option value="petitioner">Petitioner</option>
+                                            <option value="plaintiff">Plaintiff</option>
+                                         </select>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="gender" class="form-label">Gender:</label>
                                     <select id="agender" name="agender" class="form-control">
+                                    <option disabled selected>Gender</option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
@@ -121,7 +128,7 @@
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-6">
-                                    <label class="form-label">Date Start:</label>
+                                    <label class="form-label">Case recieved:</label>
                                     <input type="date" class="form-control" name="astartdate" id="astartdate">
                                 </div>
                                 <div class="col-md-6">

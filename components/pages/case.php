@@ -230,7 +230,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <label>Date Start:</label>
+                                <label>Case Received:</label>
                             </div>
                             <div class="col-md-6">
                                 <label id="vstartdate"></label>
