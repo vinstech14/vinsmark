@@ -50,7 +50,7 @@
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">
           <span>Doesn't have an account?</span>
-            <a href="./components/signup.php">Sign up</a>
+            <a href="./components/signup.php">Signup</a>
           </div>
         </form>
         </div>
