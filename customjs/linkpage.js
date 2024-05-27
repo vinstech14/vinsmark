@@ -39,7 +39,7 @@ function loadPage(page) {
         setPageBg('reportm');
     }
     else if (page === "Calendar"){
-        panel.innerHTML = '<object type="text/html" data="./pages/calendar.php" style="width:100%; height:92vh;"></object>';
+        panel.innerHTML = '<object type="text/html" data="./pages/calendar.html" style="width:100%; height:92vh;"></object>';
         setPageBg('calendarm');
     }
     else  setPageBg('none');
