@@ -23,8 +23,8 @@
         <form class="mt-2" method="post" action="./functions/login.php">
           <h2 class=text-center>Login</h2>
           <div class="m-3" id="un" style="display: none;">
-            <label class="labelconf" id="emaill">Email</label>
-            <input type="email" class="form-control bg-transparent" id="email" placeholder="Enter email" name="uemail" oninput='showlabeltop()'>
+            <label class="labelconf" id="emaill">Username</label>
+            <input type="text" class="form-control bg-transparent" id="email" placeholder="Enter username" name="uemail" oninput='showlabeltop()'>
           </div>
           <div class="m-3" id="pw" style="display:none;">
           <label class="labelconf" id="passl">Password</label>

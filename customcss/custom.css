@@ -364,53 +364,120 @@ object {
     animation: fadeInFromTop 0.5s ease-in-out;
   }
   
-/*view animation
-@keyframes eye-blink {
-    0%, 20%, 40%, 60%, 80%, 100% {
-      transform: scaleY(1);
-    }
-    10%, 90% {
-      transform: scaleY(0.5);
-    }
-    50% {
-      transform: scaleY(0.1);
-    }
+  .forgotcards {
+    transition: transform 0.5s, opacity 0.5s;
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    opacity: 0.5;
+    z-index: 1;
+    transform: scale(0.8);
+  }
+  .forgotcards.active {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    z-index: 2;
+  }
+  .forgotcards.previous {
+    transform: scale(0.7) translateX(-100%);
+  }
+  .forgotcards.next {
+    transform: scale(0.7) translateX(100%);
+  }
+  .card-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    overflow: hidden;
+  }
+  .progress-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .progress-dots span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+  }
+  .progress-dots .active-dot {
+    background-color: #007bff;
+  }
+  .verification-input {
+    width: 50px;
+    margin: 0 5px;
+    font-size: 1.25rem;
+  }
+  .forgotmodal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .forgotmodal-content {
+    background-color: #fefefe;
+    margin: 20% auto;
+    padding: 10px; 
+    border-radius: 10px;
+    width: 50%;
+    max-width: 350px; 
+    text-align: center;
+    font-size: 1.25rem;
   }
   
-  .btn .fa-eye {
-    animation: eye-blink 4s ease-in-out infinite;
-    transform-origin: center center;
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
   }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .checkmark__circle {
+stroke-dasharray: 166;
+stroke-dashoffset: 166;
+stroke-width: 1.5;
+stroke-miterlimit: 10;
+stroke: #00cc00;
+fill: none;
+animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
 
-@keyframes trash-shake {
-    0%, 100% {
-      transform: rotate(0deg);
-    }
-    10%, 30%, 50%, 70%, 90% {
-      transform: rotate(-10deg);
-    }
-    20%, 40%, 60%, 80% {
-      transform: rotate(10deg);
-    }
-  }
-  
-  .btn .fa-trash {
-    animation: trash-shake 5s ease-in-out infinite;
-  }
+.checkmark__check {
+stroke-width: 2;
+stroke: #00cc00;
+fill: none;
+stroke-dasharray: 48;
+stroke-dashoffset: 48;
+animation: strokeCheck 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
 
-@keyframes pencil-writing {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25% {
-      transform: translateX(-2px);
-    }
-    75% {
-      transform: translateX(2px);
-    }
+@keyframes stroke {
+100% {
+  stroke-dashoffset: 0;
+}
+}
+
+@keyframes strokeCheck {
+100% {
+  stroke-dashoffset: 0;
+}
+}
+
+
+  .button-container {
+    text-align: center;
   }
-  
-  .btn .fa-edit {
-    animation: pencil-writing 5s ease-in-out infinite;
-  }
-*/
