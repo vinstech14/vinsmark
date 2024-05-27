@@ -45,7 +45,7 @@
             <h5 class="card-title">A verification code has been sent to</h5>
             <h5><b>email.com</b></h5>
             <div class="text-start">
-            <p class="mt-5 mb-2">Please check you inbox and enter the verification code below to verify your account.</p>
+            <p class="mt-5 mb-2">Please check your inbox and enter the verification code below to verify your account.</p>
             <p> The code will expire in time</p>
             </div>
             <form>
