@@ -409,7 +409,7 @@ object {
   }
   .verification-input {
     width: 50px;
-    margin: 0 5px;
+    margin: 5px;
     font-size: 1.25rem;
   }
   .forgotmodal {
@@ -419,20 +419,25 @@ object {
     left: 0;
     top: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
   }
+  
   .forgotmodal-content {
     background-color: #fefefe;
-    margin: 20% auto;
-    padding: 10px; 
+    padding: 10px;
     border-radius: 10px;
     width: 50%;
-    max-width: 350px; 
+    max-width: 350px;
     text-align: center;
     font-size: 1.25rem;
-  }
+    margin: auto; /* Center horizontally */
+    position: absolute;
+    top: 50%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Adjust position both vertically and horizontally */
+  }  
   
   .close {
     color: #aaa;

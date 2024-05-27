@@ -16,7 +16,12 @@
       <div class="col-12 card-container">
         <div class="card forgotcards active" id="step1">
           <div class="card-body text-center">
-            <h5 class="card-title">Set New Password</h5>
+            <h1><i class="fas fa-eye"></i></h1>
+            <h1 class="card-title">Set A New Password</h1>
+              <hr class="mt-3 mb-3">
+              <div class="text-start">
+                <p>Please choose a password that contains character, number, symbols, uppercase and lower case for stronger password</p>
+              </div>
             <form>
               <div class="mb-3">
                 <label for="newPassword" class="form-label d-none">New Password</label>
@@ -34,7 +39,15 @@
         </div>
         <div class="card forgotcards next" id="step2">
           <div class="card-body text-center">
-            <h5 class="card-title">Verification Code</h5>
+            <h1><i class="fas fa-envelope"></i></h1>
+            <h1>VERIFY YOU ACCOUNT</h1>
+            <hr class="mt-3 mb-3">
+            <h5 class="card-title">A verification code has been sent to</h5>
+            <h5><b>email.com</b></h5>
+            <div class="text-start">
+            <p class="mt-5 mb-2">Please check you inbox and enter the verification code below to verify your account.</p>
+            <p> The code will expire in time</p>
+            </div>
             <form>
               <div class="mb-3">
                 <div id="verificationCode" class="d-flex justify-content-between">
@@ -46,10 +59,11 @@
                   <input type="text" class="form-control text-center verification-input" maxlength="1" required>
                 </div>
               </div>
-              <div class="button-container">
+              <div class="button-container m-2">
                 <button type="button" class="btn btn-secondary btn-lg" id="prevBtn">Previous</button>
                 <button type="button" class="btn btn-primary btn-lg" id="verifyBtn">Verify</button>
               </div>
+              <a href="">Resend Code</a>
             </form>
           </div>
         </div>
