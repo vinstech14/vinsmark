@@ -107,7 +107,7 @@
       var vcode = document.getElementById('vcode');
       var first = document.getElementById('fname');
       var last = document.getElementById('lname');
-      var name = first.value+' '+middle.value+' '+last.value;
+      var name = first.value+' '+last.value;
     $.ajax({
         url: "../functions/verify.php",
         type: "POST",
