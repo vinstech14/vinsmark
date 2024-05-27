@@ -37,6 +37,9 @@
               </div>
           </div>
           </div>
+          <div class="m-3 text-end" id="forgot" style="display:none;">
+            <a class="text-center" href="./components/forgotpass.php">Forgot Password?</a>
+          </div>
           <div class="m-3" id="usertypediv">
             <select class="form-select text-center radiusb" id="userType" name="userType" onchange="showLoginField(this)">
               <option selected disabled>Select Type of User</option>
