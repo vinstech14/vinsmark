@@ -1,7 +1,6 @@
 
 <?php
-require_once("../../database/databasecon.php");
-require_once("../../functions/functions.php");
+require_once("../database/databasecon.php");
 
 $query = "SELECT * FROM schedule_list";
 $result = $conn->query($query);

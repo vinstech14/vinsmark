@@ -1,5 +1,5 @@
 <?php
-require_once('../../database/databasecon.php');
+require_once('../database/databasecon.php');
 
 $id = $_POST['id'];
 
