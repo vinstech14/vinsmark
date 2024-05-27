@@ -22,26 +22,12 @@
         }
     </style>
    <body class="generalbg">
-      <!-- <div class="scroll-down-btn text-end">
-         <div class="col">
-           <div class="row up" id="scrollup" style="display:none;">
-             <a href="#bottom" onclick=" toggleScroll('up')">
-               <i class="fas fa-chevron-up scrollIcon" style="color:#013220;"></i>
-             </a>
-           </div>
-           <div class="row down" id="scrolldown">
-             <a href="#bottom" onclick="toggleScroll('down')">
-               <i class="fas fa-chevron-down scrollIcon side" style="color:#013220;"></i>
-             </a>
-           </div>
-         </div>
-         </div>-->
       <div class="container p-2">
          <form method="post" action="">
          <div class="card p-5 shadowbottom" id="section1">
                <h3 class="text-center">Purpose</h3>
                <div class="row justify-content-center mt-3">
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
                   <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-paper-plane text-white m-2"></i>Notarize</button>
                </div>
             </div>
