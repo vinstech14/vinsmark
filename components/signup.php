@@ -27,22 +27,16 @@
           <form action="../functions/registeraccount.php" method="post">
             
               <div class="row m-1">
-              <div class="col-md-4">
-                  <div class="form-group" id="dfname">
-                  <label class="labelconf" id="lnamel">Last Name</label>
-                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='othershowlabeltop()'>
-                  </div>
-              </div>
-              <div class="col-md-4">
+              <div class="col-md-6">
                   <div class="form-group" id="dmname">
                   <label class="labelconf" id="fnamel">First Name</label>
                   <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name" name="fname" oninput='othershowlabeltop()'>
                   </div>
               </div>
-              <div class="col-md-4">
-                  <div class="form-group" id="dlname">
-                  <label class="labelconf" id="mnamel">Middle Name</label>
-                  <input type="text" class="form-control bg-transparent" id="mname" placeholder="Middle Name" name="mname" oninput='othershowlabeltop()'>
+              <div class="col-md-6">
+                  <div class="form-group" id="dfname">
+                  <label class="labelconf" id="lnamel">Last Name</label>
+                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='othershowlabeltop()'>
                   </div>
               </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2024 at 04:19 PM
+-- Generation Time: May 27, 2024 at 05:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,9 +43,7 @@ INSERT INTO `accounts` (`id`, `name`, `email`, `password`, `usertype`) VALUES
 (1, 'admin', 'admin@gmail.com', 'admin123', 'Attorney'),
 (2, 'user', 'user@gmail.com', 'user123', 'Staff'),
 (3, 'client', 'client@gmail.com', 'client123', 'Client'),
-(11, 'Ryl', 'ryl@gmail.com', 'rylryl', 'Client'),
-(12, 'daryl', 'darylcerina1@gmail.com', 'darealme#2', 'Client'),
-(13, 'daryltest', 'darylcerina@gmail.com', 'darealme#2', 'Client');
+(18, 'Daryl Ibut Cerina', 'darylcerina38@gmail.com', 'Darealme#2', 'Client');
 
 -- --------------------------------------------------------
 
@@ -121,17 +119,26 @@ CREATE TABLE `client` (
   `address` varchar(99) NOT NULL,
   `region` varchar(99) NOT NULL,
   `mobilenumber` varchar(99) NOT NULL,
-  `email` varchar(99) NOT NULL
+  `email` varchar(99) NOT NULL,
+  `monthlyincome` varchar(99) NOT NULL,
+  `imprisoned` varchar(99) NOT NULL,
+  `imprisoneddate` date DEFAULT NULL,
+  `collegedegree` varchar(99) NOT NULL,
+  `dialect` varchar(99) NOT NULL,
+  `spouse` varchar(99) NOT NULL,
+  `spouseaddress` varchar(99) NOT NULL,
+  `spousecontact` int(99) NOT NULL,
+  `detentionaddress` varchar(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `client`
 --
 
-INSERT INTO `client` (`id`, `firstname`, `middlename`, `lastname`, `birthdate`, `age`, `gender`, `religion`, `citizenship`, `civilstatus`, `address`, `region`, `mobilenumber`, `email`) VALUES
-(5, 'Daryl', 'Ibut', 'Cerina', '1999-11-05', 24, 'Male', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', '09610721432', 'darylcerina38@gmail.com'),
-(6, 'Ammie Jane ', 'M.', 'Encinares', '2024-04-30', 23, 'Female', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', ' 0923281382', 'ammy@gmail.com'),
-(9, 'Rick', 'Z.', 'Grymes', '2024-04-30', 24, 'Female', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', '09610721432', 'rick@gmail.com');
+INSERT INTO `client` (`id`, `firstname`, `middlename`, `lastname`, `birthdate`, `age`, `gender`, `religion`, `citizenship`, `civilstatus`, `address`, `region`, `mobilenumber`, `email`, `monthlyincome`, `imprisoned`, `imprisoneddate`, `collegedegree`, `dialect`, `spouse`, `spouseaddress`, `spousecontact`, `detentionaddress`) VALUES
+(5, 'Daryl', 'Ibut', 'Cerina', '1999-11-05', 24, 'Male', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', '09610721432', 'darylcerina38@gmail.com', '', '', NULL, '', '', '', '', 0, ''),
+(6, 'Ammie Jane ', 'M.', 'Encinares', '2024-04-30', 23, 'Female', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', ' 0923281382', 'ammy@gmail.com', '', '', NULL, '', '', '', '', 0, ''),
+(9, 'Rick', 'Z.', 'Grymes', '2024-04-30', 24, 'Female', 'Born Again', 'Filipino', 'Single', 'Lot 30 Block 34 Phase 1 San Lorenzo Puan Davao City', 'Region XI', '09610721432', 'rick@gmail.com', '', '', NULL, '', '', '', '', 0, '');
 
 -- --------------------------------------------------------
 
@@ -144,11 +151,11 @@ CREATE TABLE `reports` (
   `kra` varchar(99) NOT NULL,
   `kip` varchar(99) NOT NULL,
   `total` int(11) NOT NULL,
-  `cr` varchar(99) NOT NULL,
-  `cv` varchar(99) NOT NULL,
-  `adm1` varchar(99) NOT NULL,
-  `adm2` varchar(99) NOT NULL,
-  `adm3` varchar(99) NOT NULL
+  `cr` int(99) NOT NULL,
+  `cv` int(99) NOT NULL,
+  `adm1` int(99) NOT NULL,
+  `adm2` int(99) NOT NULL,
+  `adm3` int(99) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -156,7 +163,7 @@ CREATE TABLE `reports` (
 --
 
 INSERT INTO `reports` (`id`, `kra`, `kip`, `total`, `cr`, `cv`, `adm1`, `adm2`, `adm3`) VALUES
-(1, 'test', 'test', 101, 'test', 'test', 'test', 'test', 'test');
+(3, 'Test', 'Test', 1, 1, 1, 1, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -200,7 +207,7 @@ ALTER TABLE `reports`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `archived`
@@ -224,7 +231,7 @@ ALTER TABLE `client`
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

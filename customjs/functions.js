@@ -166,7 +166,6 @@ function showlabeltop() {
 function othershowlabeltop() {
   const fields = [
     { input: 'fname', label: 'fnamel' },
-    { input: 'mname', label: 'mnamel' },
     { input: 'lname', label: 'lnamel' },
     { input: 'vcode', label: 'vcodel' }
   ];
