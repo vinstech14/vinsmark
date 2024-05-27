@@ -20,7 +20,7 @@
             <h1 class="card-title">Set A New Password</h1>
               <hr class="mt-3 mb-3">
               <div class="text-start">
-                <p>Please choose a password that contains character, number, symbols, uppercase and lower case for stronger password</p>
+                <p>Please choose a password that contains both characters, numbers, symbols, uppercase and lower case for stronger password.</p>
               </div>
             <form>
               <div class="mb-3">
