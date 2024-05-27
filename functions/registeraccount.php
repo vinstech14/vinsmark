@@ -4,9 +4,8 @@ require_once("functions.php");
 
 if(isset($_POST['ssubmit'])){
     $fname = $_POST['fname'];
-    $mname = $_POST['mname'];
     $lname = $_POST['lname'];
-    $name = $fname . ' ' . $mname . ' ' . $lname;
+    $name = $fname . ' ' . $lname;
     $email = $_POST['email'];
     $password = $_POST['spword'];
     $vcinput = $_POST['vcode'];

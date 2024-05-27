@@ -106,7 +106,6 @@
       var createbtn = document.getElementById('ssubmit');
       var vcode = document.getElementById('vcode');
       var first = document.getElementById('fname');
-      var middle = document.getElementById('mname');
       var last = document.getElementById('lname');
       var name = first.value+' '+middle.value+' '+last.value;
     $.ajax({
