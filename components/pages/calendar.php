@@ -1,3 +1,6 @@
+<?php 
+require_once('../../database/databasecon.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
