@@ -56,7 +56,7 @@
               </p>
               <p> The code will expire in time</p>
             </div>
-            <form action="">
+            <form>
               <div class="mb-3">
                 <div id="verificationCode" class="d-flex justify-content-between">
                   <input type="text" class="form-control text-center verification-input" maxlength="1" required>
@@ -148,8 +148,16 @@
     });
 
     document.getElementById('verifyBtn').addEventListener('click', () => {
-      // Assuming verification is successful
-      successModal.style.display = "block";
+      let verificationCode = '';
+      $('.verification-input').each(function () {
+        verificationCode += $(this).val();
+      });
+      const expectedCode = '123456'; // Replace '123456' with the actual expected verification code
+      if (verificationCode === expectedCode) {
+        successModal.style.display = "block";
+      } else {
+        alert('Verification code is incorrect');
+      }
     });
 
     closeModal.onclick = function () {
