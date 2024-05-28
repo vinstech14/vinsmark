@@ -16,13 +16,17 @@
       <div class="col-12 card-container">
         <div class="card forgotcards active" id="step1">
           <div class="card-body text-center">
-            <h1><i class="fas fa-eye"></i></h1>
+            <h1><i class="fas fa-eye text-success"></i></h1>
             <h1 class="card-title">Set A New Password</h1>
               <hr class="mt-3 mb-3">
               <div class="text-start">
                 <p>Please choose a password that contains both characters, numbers, symbols, uppercase and lower case for stronger password.</p>
               </div>
             <form>
+              <div class="mb-3">
+                <label for="emaill" class="form-label d-none">Email</label>
+                <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" required>
+              </div>
               <div class="mb-3">
                 <label for="newPassword" class="form-label d-none">New Password</label>
                 <input type="password" class="form-control form-control-lg" id="newPassword" placeholder="New Password" required>
@@ -32,15 +36,15 @@
                 <input type="password" class="form-control form-control-lg" id="confirmPassword" placeholder="Confirm Password" required>
               </div>
               <div class="button-container">
-                <button type="button" class="btn btn-primary btn-lg" id="nextBtn">Next Step</button>
+                <button type="button" class="btn btn-success btn-lg shadowbottom" id="nextBtn">Next Step</button>
               </div>
             </form>
           </div>
         </div>
         <div class="card forgotcards next" id="step2">
           <div class="card-body text-center">
-            <h1><i class="fas fa-envelope"></i></h1>
-            <h1>VERIFY YOU ACCOUNT</h1>
+            <h1><i class="fas fa-envelope text-success"></i></h1>
+            <h1>VERIFY YOUR ACCOUNT</h1>
             <hr class="mt-3 mb-3">
             <h5 class="card-title">A verification code has been sent to</h5>
             <h5><b>email.com</b></h5>
@@ -60,8 +64,8 @@
                 </div>
               </div>
               <div class="button-container m-2">
-                <button type="button" class="btn btn-secondary btn-lg" id="prevBtn">Previous</button>
-                <button type="button" class="btn btn-primary btn-lg" id="verifyBtn">Verify</button>
+                <button type="button" class="btn btn-secondary btn-lg shadowbottom" id="prevBtn">Previous</button>
+                <button type="button" class="btn btn-success btn-lg shadowbottom" id="verifyBtn">Verify</button>
               </div>
               <a href="">Resend Code</a>
             </form>
@@ -116,6 +120,20 @@
         currentStep++;
         updateSteps();
       }
+      const email = $('#email').val();
+    $.ajax({
+        url: "../functions/verify.php",
+        type: "POST",
+        data: {email: email},
+        success: function (response) {
+          const result = JSON.parse(response);
+          // Show
+        },
+        error: function (xhr, status, error) {
+            // Handle errors
+            console.error(xhr.responseText);
+        }
+    });
     });
 
     document.getElementById('prevBtn').addEventListener('click', () => {
