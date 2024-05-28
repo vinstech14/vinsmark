@@ -507,6 +507,9 @@ object {
     /* Adjust position both vertically and horizontally */
 }
 
+#verificationModal{
+    top: 20%;
+}
 .close {
     color: #aaa;
     float: right;

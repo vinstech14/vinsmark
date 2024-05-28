@@ -18,10 +18,11 @@
           <div class="card-body text-center">
             <h1><i class="fas fa-eye text-success"></i></h1>
             <h1 class="card-title">Set A New Password</h1>
-              <hr class="mt-3 mb-3">
-              <div class="text-start">
-                <p>Please choose a password that contains both characters, numbers, symbols, uppercase and lower case for stronger password.</p>
-              </div>
+            <hr class="mt-3 mb-3">
+            <div class="text-start">
+              <p>Please choose a password that contains both characters, numbers, symbols, uppercase and lower case for
+                stronger password.</p>
+            </div>
             <form>
               <div class="mb-3">
                 <label for="emaill" class="form-label d-none">Email</label>
@@ -29,11 +30,13 @@
               </div>
               <div class="mb-3">
                 <label for="newPassword" class="form-label d-none">New Password</label>
-                <input type="password" class="form-control form-control-lg" id="newPassword" placeholder="New Password" required>
+                <input type="password" class="form-control form-control-lg" id="newPassword" placeholder="New Password"
+                  required>
               </div>
               <div class="mb-3">
                 <label for="confirmPassword" class="form-label d-none">Confirm Password</label>
-                <input type="password" class="form-control form-control-lg" id="confirmPassword" placeholder="Confirm Password" required>
+                <input type="password" class="form-control form-control-lg" id="confirmPassword"
+                  placeholder="Confirm Password" required>
               </div>
               <div class="button-container">
                 <button type="button" class="btn btn-success btn-lg shadowbottom" id="nextBtn">Next Step</button>
@@ -49,10 +52,11 @@
             <h5 class="card-title">A verification code has been sent to</h5>
             <h5><b>email.com</b></h5>
             <div class="text-start">
-            <p class="mt-5 mb-2">Please check your inbox and enter the verification code below to verify your account.</p>
-            <p> The code will expire in time</p>
+              <p class="mt-5 mb-2">Please check your inbox and enter the verification code below to verify your account.
+              </p>
+              <p> The code will expire in time</p>
             </div>
-            <form>
+            <form action="">
               <div class="mb-3">
                 <div id="verificationCode" class="d-flex justify-content-between">
                   <input type="text" class="form-control text-center verification-input" maxlength="1" required>
@@ -82,8 +86,8 @@
   <div class="forgotmodal" id="successModal">
     <div class="forgotmodal-content">
       <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 3 50 50">
-        <circle class="checkmark__circle" cx="26" cy="26" r="10" fill="none"/>
-        <path class="checkmark__check" fill="none" d="M21 25 L24 30 Q25 32, 30 22 L32 24"/>
+        <circle class="checkmark__circle" cx="26" cy="26" r="10" fill="none" />
+        <path class="checkmark__check" fill="none" d="M21 25 L24 30 Q25 32, 30 22 L32 24" />
       </svg>
       <h1 style="margin-top: -50px;">Success!</h1>
       <p class="mt-3">Your password has been changed.</p>
@@ -121,19 +125,19 @@
         updateSteps();
       }
       const email = $('#email').val();
-    $.ajax({
+      $.ajax({
         url: "../functions/verify.php",
         type: "POST",
-        data: {email: email},
+        data: { email: email },
         success: function (response) {
           const result = JSON.parse(response);
           // Show
         },
         error: function (xhr, status, error) {
-            // Handle errors
-            console.error(xhr.responseText);
+          // Handle errors
+          console.error(xhr.responseText);
         }
-    });
+      });
     });
 
     document.getElementById('prevBtn').addEventListener('click', () => {
@@ -148,11 +152,11 @@
       successModal.style.display = "block";
     });
 
-    closeModal.onclick = function() {
+    closeModal.onclick = function () {
       successModal.style.display = "none";
     }
 
-    window.onclick = function(event) {
+    window.onclick = function (event) {
       if (event.target == successModal) {
         successModal.style.display = "none";
       }

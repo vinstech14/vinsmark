@@ -8,7 +8,6 @@
   <?php readfile('../global/header.html'); ?>
   <link rel="stylesheet" href="../customcss/custom.css" />
   <script src="../customjs/functions.js"></script>
-  
 </head>
 
 <body>
@@ -17,141 +16,197 @@
       <div class="card-body generalbg" style="border-radius:20px;">
         <div class="row">
           <div class="col-md-3 text-center logos popin">
-          <img src="../images/pao.png" class="rounded-circle" alt="Avatar" style="width: 120px; height: auto;" />
+            <img src="../images/pao.png" class="rounded-circle" alt="Avatar" style="width: 120px; height: auto;" />
           </div>
           <div class="col-md-9 popin">
-        <div class="card">
-          <div class="text-center mt-2">
-          <h2>Create account</h2>
-          </div>
-          <form action="../functions/registeraccount.php" method="post">
-            
-              <div class="row m-1">
-              <div class="col-md-6">
-                  <div class="form-group" id="dmname">
-                  <label class="labelconf" id="fnamel">First Name</label>
-                  <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name" name="fname" oninput='othershowlabeltop()'>
+            <div class="card">
+              <div class="text-center mt-2">
+                <h2>Create account</h2>
+              </div>
+              <form id="signupForm" action="../functions/registeraccount.php" method="post">
+                <div class="row m-1">
+                  <div class="col-md-6">
+                    <div class="form-group" id="dmname">
+                      <label class="labelconf" id="fnamel">First Name</label>
+                      <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name"
+                        name="fname" oninput='othershowlabeltop()'>
+                    </div>
                   </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="form-group" id="dfname">
-                  <label class="labelconf" id="lnamel">Last Name</label>
-                  <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name" name="lname" oninput='othershowlabeltop()'>
+                  <div class="col-md-6">
+                    <div class="form-group" id="dfname">
+                      <label class="labelconf" id="lnamel">Last Name</label>
+                      <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name"
+                        name="lname" oninput='othershowlabeltop()'>
+                    </div>
                   </div>
-              </div>
-            </div>
-            <div class="form-group m-3" id="semail">
-            <label class="labelconf" id="emaill">Email</label>
-              <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email" name="email" oninput='checkEmail()'>
-            </div>
-            <div class="form-group m-3" id="spassword">
-            <label class="labelconf" id="passl">Password</label>
-              <div class="input-group">
-              <input type="password" class="form-control bg-transparent passfield" id="password" placeholder="Password" name="spword" oninput='showlabeltop()'>
-              <div class="input-group-append">
-                  <span class="input-group-text bg-transparent eyeborder">
-                      <i class="fas fa-eye-slash" id="togglespassword"></i>
-                  </span>
-              </div>
-          </div>
-            </div>
-            <div class="form-group m-3" id="sconfirmpw">
-            <label class="labelconf" id="cpassl">Confirm Password</label>
-              <div class="input-group">
-              <input type="password" class="form-control bg-transparent passfield" id="confirm_password" placeholder="Confirm password" name="scpword" oninput='passfieldcombo()'>
-              <div class="input-group-append">
-                  <span class="input-group-text bg-transparent eyeborder">
-                      <i class="fas fa-eye-slash" id="togglescpassword"></i>
-                  </span>
-              </div>
-          </div>
-            </div>
-            <div class="row m-1">
-              <div class="col-md-3 text-start" id="getcode">
-                  <button type="button" class="btn btn-success sideback radiusb shadowbottom gcodebtn" id="gcodebtn" disabled>Get code</button>
                 </div>
-              <div class="col-md-9">
-                <div class="form-group" id="dvcode">
-                <label class="labelconf" id="vcodel">Verification Code</label>
-                <input type="text" class="form-control bg-transparent" id="vcode" placeholder="Verification Code" name="vcode" oninput='othershowlabeltop()' disabled>
+                <div class="form-group m-3" id="semail">
+                  <label class="labelconf" id="emaill">Email</label>
+                  <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email"
+                    name="email" oninput='checkEmail()'>
+                </div>
+                <div class="form-group m-3" id="spassword">
+                  <label class="labelconf" id="passl">Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control bg-transparent passfield" id="password"
+                      placeholder="Password" name="spword" oninput='showlabeltop()'>
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-transparent eyeborder">
+                        <i class="fas fa-eye-slash" id="togglespassword"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group m-3" id="sconfirmpw">
+                  <label class="labelconf" id="cpassl">Confirm Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control bg-transparent passfield" id="confirm_password"
+                      placeholder="Confirm password" name="scpword" oninput='passfieldcombo()'>
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-transparent eyeborder">
+                        <i class="fas fa-eye-slash" id="togglescpassword"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center" id="sbutton">
+                  <button type="button" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom createbtn"
+                    name="create" value="submit" id="create">Create</button>
+                </div>
+                <div class="text-center mb-3" id="sl">
+                  <span>Already have an account?</span>
+                  <a href="../index.php">Login</a>
+                </div>
+              </form>
+
+              <!-- Modal for verification code -->
+              <div class="modal fade" id="verificationModal" tabindex="-1" role="dialog"
+                aria-labelledby="verificationModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content p-3">
+                    <div class="modal-body text-center">
+                      <!-- Verification Code Section -->
+                      <div id="verificationSection">
+                        <input id="vcid" hidden></input>
+                        <h1><i class="fas fa-envelope text-success"></i></h1>
+                        <h1>VERIFY YOUR ACCOUNT</h1>
+                        <hr class="mt-3 mb-3">
+                        <h5 class="card-title">A verification code has been sent to</h5>
+                        <h5><b class="emailtext"></b></h5>
+                        <div class="text-start">
+                          <p class="mt-5 mb-2">Please check your inbox and enter the verification code below to verify your
+                            account.</p>
+                          <p>The code will expire in time</p>
+                        </div>
+                        <div class="mb-3">
+                          <div id="verificationCode" class="d-flex justify-content-between">
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                            <input type="text" class="form-control text-center verification-input" maxlength="1" required>
+                          </div>
+                        </div>
+                        <div class="button-container m-2">
+                          <button type="button" class="btn btn-success btn-lg shadowbottom" id="verifyBtn">Verify</button>
+                        </div>
+                        <a href="">Resend Code</a>
+                      </div>
+                      
+                      <!-- Success Message Section (Hidden by default) -->
+                      <div id="successSection" style="display:none;">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 3 50 50">
+                          <circle class="checkmark__circle" cx="26" cy="26" r="10" fill="none" />
+                          <path class="checkmark__check" fill="none" d="M21 25 L24 30 Q25 32, 30 22 L32 24" />
+                        </svg>
+                        <h1 style="margin-top: -50px;">Success!</h1>
+                        <p class="mt-3">Your account has been created.</p>
+                        <a href="../index.php">Login</a><span> to your account</span>
+                      </div>
+
+                    </div>
+                  </div>
                 </div>
               </div>
-              <p class="text-center mt-3 mb-0" id="plschck" style="display:none;"></p>
-              <input type="hidden" name="vcname" id="vcid">
             </div>
-            <div class="text-center" id="sbutton">
-              <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom" name="ssubmit" value="submit" id="ssubmit" disabled>Create</button>
-            </div>
-            <div class="text-center mb-3" id="sl">
-            <span>Already have an account?</span>
-            <a href="../index.php">Login</a>
           </div>
-          </form>
         </div>
-        </div>
-      </div>
       </div>
     </div>
   </div>
-
+  
   <script>
-    toggleP('togglespassword', 'password');
-    toggleP('togglescpassword', 'confirm_password');
-</script>
-<script>
     $(document).ready(function () {
-    $('.gcodebtn').on('click', function () {
-      const email = $('#email').val();
-      var checkl = document.getElementById('plschck');
-      var createbtn = document.getElementById('ssubmit');
-      var vcode = document.getElementById('vcode');
-      var first = document.getElementById('fname');
-      var last = document.getElementById('lname');
-      var name = first.value+' '+last.value;
-    $.ajax({
-        url: "../functions/verify.php",
-        type: "POST",
-        data: {email: email},
-        success: function (response) {
-          const result = JSON.parse(response);
-          $('#vcid').val(result);
-          checkl.style.display = 'block';
-          checkl.innerText = 'Code sent to your email';
-          createbtn.disabled = false;
-          vcode.disabled = false;
-          localStorage.setItem('userType', 'Client');
-          localStorage.setItem('nameTag', name);
-        },
-        error: function (xhr, status, error) {
-            // Handle errors
-            console.error(xhr.responseText);
+      toggleP('togglespassword', 'password');
+      toggleP('togglescpassword', 'confirm_password');
+
+      $('#create').on('click', function () {
+        const email = $('#email').val();
+        const firstName = $('#fname').val();
+        const lastName = $('#lname').val();
+        const password = $('#password').val();
+        const confirmPassword = $('#confirm_password').val();
+
+        // Check if all fields are filled
+        if (email && firstName && lastName && password && confirmPassword) {
+          $('#verificationModal').modal('show');
+          // If all fields are filled, make the AJAX request
+          $.ajax({
+            url: "../functions/verify.php",
+            type: "POST",
+            data: { email: email },
+            success: function (response) {
+              const result = JSON.parse(response);
+              $('#vcid').val(result);
+              $('.emailtext').text(email);
+            },
+            error: function (xhr, status, error) {
+              console.error(xhr.responseText);
+            }
+          });
+        } else {
+          alert('Please fill in all fields before proceeding.');
         }
+      });
+
+      $('#verifyBtn').on('click', function () {
+        let verificationCode = '';
+        $('.verification-input').each(function () {
+          verificationCode += $(this).val();
+        });
+        const expectedCode = $('#vcid').val();
+        if (verificationCode === expectedCode) {
+          // Hide verification section and show success section
+          $('#verificationSection').hide();
+          $('#successSection').show();
+        } else {
+          alert('Verification code is incorrect');
+        }
+      });
     });
-});
-});
-</script>
-<script>
-  function checkEmail() {
-      var email = document.getElementById("email").value;
-      var emaill = document.getElementById("emaill");
-      var vcodebtn =document.getElementById("gcodebtn");
+
+    function checkEmail() {
+      const email = $("#email").val();
       $.ajax({
         url: "../receivedapi/checkduplicate.php",
         type: "POST",
-        data: { data1: email, column1:'email' ,t: 'accounts' },
-        success: function(response) {
+        data: { data1: email, column1: 'email', t: 'accounts' },
+        success: function (response) {
           const result = JSON.parse(response);
-          if(result.status === 'exists')
-            emaill.innerText = 'Email already exists';
-          else
-            emaill.innerText = 'Email';
+          if (result.status === 'exists') {
+            $('#emaill').text('Email already exists');
+          } else {
+            $('#emaill').text('Email');
+          }
         },
-        error: function(xhr, status, error) {
+        error: function (xhr, status, error) {
           console.error(xhr.responseText);
         }
       });
       showlabeltop();
     }
-</script>
+  </script>
 </body>
+
 </html>
