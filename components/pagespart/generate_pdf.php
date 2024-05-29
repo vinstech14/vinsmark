@@ -23,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['report_data'])) {
             }
             .logo {
                 text-align: center;
-                margin-bottom: 20px;
             }
             .report-title {
                 text-align: center;
@@ -61,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['report_data'])) {
     <body>
         <div class="container">
             <div class="logo">
-                <img src="path/to/your/logo.png" alt="Logo" width="100">
+                <img src="/images/pao.png" class="rounded-circle" alt="Logo" style="width: 100px; height: auto;">
             </div>
             <div class="report-title">
                 <h2>Reports</h2>
