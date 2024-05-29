@@ -10,3 +10,9 @@ Regards, A.
             R.
                 Y.
                     L
+
+syntaxes run in terminal:
+
+For pdf library: composer require dompdf/dompdf
+
+For email library: composer require phpmailer/phpmailer

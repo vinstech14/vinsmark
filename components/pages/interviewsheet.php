@@ -34,7 +34,7 @@
                   <h5 class="modal-title text-center" id="exampleModalLabel">Advice</h5>
                   </div>
                   <div class="modal-body justify-content-center">
-                     <object type="text/html" data="../pagespart/pdf.php" style="width:100%; height:70vh;"></object>
+                     <object type="text/html" data="../pagespart/update_pdf.php" style="width:100%; height:70vh;"></object>
                   </div>
                   <div class="modal-footer">
                   <button type="button" class="btn btn-secondary shadowbottom" data-dismiss="modal">Close</button>
