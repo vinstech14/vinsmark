@@ -16,8 +16,7 @@ if(isset($_POST['ssubmit'])){
     $data = [$name, $email, $password, 'Client'];
     
     if($vcinput === $vcinputconfirm){
-        if(saveData($conn, $table, $columns, $data))
-            header("location: ../components/main.php");
+        saveData($conn, $table, $columns, $data);
     }
     else {
         header("location: ../components/signup.php");

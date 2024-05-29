@@ -29,27 +29,27 @@
                     <div class="form-group" id="dmname">
                       <label class="labelconf" id="fnamel">First Name</label>
                       <input type="text" class="form-control bg-transparent" id="fname" placeholder="First Name"
-                        name="fname" oninput='othershowlabeltop()'>
+                        name="fname" oninput='showlabeltop(id, "fnamel")' required>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group" id="dfname">
                       <label class="labelconf" id="lnamel">Last Name</label>
                       <input type="text" class="form-control bg-transparent" id="lname" placeholder="Last Name"
-                        name="lname" oninput='othershowlabeltop()'>
+                        name="lname" oninput='showlabeltop(id, "lnamel")' required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group m-3" id="semail">
                   <label class="labelconf" id="emaill">Email</label>
                   <input type="email" class="form-control bg-transparent email" id="email" placeholder="Email"
-                    name="email" oninput='checkEmail()'>
+                    name="email" oninput='checkEmail(id)' required>
                 </div>
                 <div class="form-group m-3" id="spassword">
                   <label class="labelconf" id="passl">Password</label>
                   <div class="input-group">
                     <input type="password" class="form-control bg-transparent passfield" id="password"
-                      placeholder="Password" name="spword" oninput='showlabeltop()'>
+                      placeholder="Password" name="spword" oninput='showlabeltop(id, "passl")' required>
                     <div class="input-group-append">
                       <span class="input-group-text bg-transparent eyeborder">
                         <i class="fas fa-eye-slash" id="togglespassword"></i>
@@ -61,7 +61,7 @@
                   <label class="labelconf" id="cpassl">Confirm Password</label>
                   <div class="input-group">
                     <input type="password" class="form-control bg-transparent passfield" id="confirm_password"
-                      placeholder="Confirm password" name="scpword" oninput='passfieldcombo()'>
+                      placeholder="Confirm password" name="scpword" oninput='showlabeltop(id,"cpassl")' required>
                     <div class="input-group-append">
                       <span class="input-group-text bg-transparent eyeborder">
                         <i class="fas fa-eye-slash" id="togglescpassword"></i>
@@ -70,15 +70,13 @@
                   </div>
                 </div>
                 <div class="text-center" id="sbutton">
-                  <button type="button" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom createbtn"
+                  <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom createbtn"
                     name="create" value="submit" id="create">Create</button>
                 </div>
                 <div class="text-center mb-3" id="sl">
                   <span>Already have an account?</span>
                   <a href="../index.php">Login</a>
                 </div>
-              </form>
-
               <!-- Modal for verification code -->
               <div class="modal fade" id="verificationModal" tabindex="-1" role="dialog"
                 aria-labelledby="verificationModalLabel" aria-hidden="true">
@@ -109,7 +107,7 @@
                           </div>
                         </div>
                         <div class="button-container m-2">
-                          <button type="button" class="btn btn-success btn-lg shadowbottom" id="verifyBtn">Verify</button>
+                          <button type="submit" class="btn btn-success btn-lg shadowbottom" id="verifyBtn" name="ssubmit">Verify</button>
                         </div>
                         <a href="">Resend Code</a>
                       </div>
@@ -120,15 +118,15 @@
                           <circle class="checkmark__circle" cx="26" cy="26" r="10" fill="none" />
                           <path class="checkmark__check" fill="none" d="M21 25 L24 30 Q25 32, 30 22 L32 24" />
                         </svg>
-                        <h1 style="margin-top: -50px;">Success!</h1>
+                        <h1 style="margin-top: -50px;">Congratulations!</h1>
                         <p class="mt-3">Your account has been created.</p>
                         <a href="../index.php">Login</a><span> to your account</span>
                       </div>
-
                     </div>
                   </div>
                 </div>
               </div>
+              </form>
             </div>
           </div>
         </div>
@@ -165,8 +163,6 @@
               console.error(xhr.responseText);
             }
           });
-        } else {
-          alert('Please fill in all fields before proceeding.');
         }
       });
 
@@ -186,7 +182,7 @@
       });
     });
 
-    function checkEmail() {
+    function checkEmail(id) {
       const email = $("#email").val();
       $.ajax({
         url: "../receivedapi/checkduplicate.php",
@@ -204,7 +200,7 @@
           console.error(xhr.responseText);
         }
       });
-      showlabeltop();
+      showlabeltop(id, "emaill");
     }
   </script>
 </body>

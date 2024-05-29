@@ -22,14 +22,14 @@
         <div class="card bg-light mt-3 popin" id="cardl">
         <form class="mt-2" method="post" action="./functions/login.php">
           <h2 class=text-center>Login</h2>
-          <div class="m-3" id="un" style="display: none;">
+          <div class="m-3" id="un">
             <label class="labelconf" id="emaill">Username</label>
-            <input type="text" class="form-control bg-transparent" id="email" placeholder="Enter username" name="uemail" oninput='showlabeltop()'>
+            <input type="text" class="form-control bg-transparent" id="email" placeholder="Enter username" name="uemail" oninput='showlabeltop(id,"emaill")'>
           </div>
-          <div class="m-3" id="pw" style="display:none;">
+          <div class="m-3" id="pw">
           <label class="labelconf" id="passl">Password</label>
           <div class="input-group">
-              <input type="password" class="form-control bg-transparent passfield" id="password" placeholder="Enter password" name="pword" oninput='showlabeltop()'>
+              <input type="password" class="form-control bg-transparent passfield" id="password" placeholder="Enter password" name="pword" oninput='showlabeltop(id, "passl")'>
               <div class="input-group-append">
                   <span class="input-group-text bg-transparent eyeborder">
                       <i class="fas fa-eye-slash" id="togglepassword"></i>
@@ -37,7 +37,7 @@
               </div>
           </div>
           </div>
-          <div class="m-3 text-end" id="forgot" style="display:none;">
+          <div class="m-3 text-end" id="forgot">
             <a class="text-center" href="./components/forgotpass.php">Forgot Password?</a>
           </div>
           <div class="m-3" id="usertypediv">
@@ -48,7 +48,7 @@
               <option value="Client">Client</option>
             </select>
           </div>
-          <div class="text-center" id="lb" style="display:none;">
+          <div class="text-center" id="lb">
             <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom loginbtn" name="submit" value="submit" onclick = "storeUserType()">Login</button>
           </div>
           <div class="text-center mb-3" id="sul" style="display:none;">

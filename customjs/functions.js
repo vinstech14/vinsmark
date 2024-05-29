@@ -112,14 +112,14 @@ function changeloginfield(usertype){
 }
 
 function showLoginField(userType){
-  var usernamediv = document.getElementById("un");
-  var passworddiv = document.getElementById("pw");
-  var loginButton = document.getElementById("lb");
+ // var usernamediv = document.getElementById("un");
+ // var passworddiv = document.getElementById("pw");
+ // var loginButton = document.getElementById("lb");
   var signuplink = document.getElementById("sul");
-  var forgotlink = document.getElementById("forgot");
-  var usertype = document.getElementById("usertypediv");
+// var forgotlink = document.getElementById("forgot");
+ // var usertype = document.getElementById("usertypediv");
   var card = document.getElementById("cardl");
-  usernamediv.classList.add('popin');
+ /* usernamediv.classList.add('popin');
   passworddiv.classList.add('popin');
   loginButton.classList.add('popin');
   usertype.classList.add('popin');
@@ -127,7 +127,7 @@ function showLoginField(userType){
   forgotlink.style.display = 'block';
   usernamediv.style.display = 'block';
   passworddiv.style.display = 'block';
-  loginButton.style.display = 'block';
+  loginButton.style.display = 'block';*/
   card.style.marginTop = '10px';
   signuplink.style.display = (userType.value === 'Client') ? 'block' : 'none';
   card.style.marginTop = (userType.value === 'Client') ? '3px' : '10px';
@@ -149,56 +149,15 @@ document.getElementById(id).addEventListener('click', function() {
 });
 }
 
-function showlabeltop() {
-  const fields = [
-    { input: 'email', label: 'emaill' },
-    { input: 'password', label: 'passl' },
-  ];
-
-  fields.forEach(field => {
-    const input = document.getElementById(field.input);
-    const label = document.getElementById(field.label);
-
-    if (input.value.trim() !== '')
-      label.style.display = 'block';
-    else 
-      label.style.display = 'none';
-  });
+function showlabeltop(inputId, labelId) {
+  var inputElement = document.getElementById(inputId);
+  var labelElement = document.getElementById(labelId);
+  
+  if (inputElement && labelElement)
+    labelElement.style.display = inputElement.value !== '' ? "block" : "none";
+  
 }
 
-function othershowlabeltop() {
-  const fields = [
-    { input: 'fname', label: 'fnamel' },
-    { input: 'lname', label: 'lnamel' },
-    { input: 'vcode', label: 'vcodel' }
-  ];
-
-  fields.forEach(field => {
-    const input = document.getElementById(field.input);
-    const label = document.getElementById(field.label);
-
-    if (input.value.trim() !== '')
-      label.style.display = 'block';
-    else 
-      label.style.display = 'none';
-  });
-}
-
-
-function passfieldcombo(){
-  var pass = document.getElementById("password");
-  var cpass = document.getElementById("confirm_password");
-  var cpassl = document.getElementById("cpassl");
-  var gcode = document.getElementById("gcodebtn");
-  cpassl.style.display = cpass.value.trim() !== '' ? "block" : "none";
-
-  if(pass.value === cpass.value){
-    gcode.disabled = false;
-  }
-  else{
-    gcode.disabled = true;
-  }
-}
 
 function sectionSelector(sectionstate, page, targetpage) {
   var pageCard = document.getElementById(page);

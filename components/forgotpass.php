@@ -25,23 +25,36 @@
             </div>
             <form>
               <div class="mb-3">
-                <label for="emaill" class="form-label d-none">Email</label>
-                <input type="email" class="form-control form-control-lg" id="email" placeholder="Email" required>
+                <label for="email" class="labelconf" id="emaill">Email</label>
+                <input type="email" class="form-control bg-transparent" id="email" placeholder="Email" oninput='showlabeltop(id, "emaill")' required>
               </div>
               <div class="mb-3">
-                <label for="newPassword" class="form-label d-none">New Password</label>
-                <input type="password" class="form-control form-control-lg" id="newPassword" placeholder="New Password"
-                  required>
+                <label for="password" class="labelconf" id="passl">New Password</label>
+                <div class="input-group">
+                    <input type="password" class="form-control bg-transparent passfield" id="password"
+                      placeholder="New Password" name="spword" oninput='showlabeltop(id, "passl")' required>
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-transparent eyeborder">
+                        <i class="fas fa-eye-slash" id="togglespassword"></i>
+                      </span>
+                    </div>
+                  </div>
               </div>
               <div class="mb-3">
-                <label for="confirmPassword" class="form-label d-none">Confirm Password</label>
-                <input type="password" class="form-control form-control-lg" id="confirmPassword"
-                  placeholder="Confirm Password" required>
+                <label class="labelconf" id="cpassl">Confirm Password</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control bg-transparent passfield" id="confirm_password"
+                      placeholder="Confirm password" name="scpword" oninput='showlabeltop(id,"cpassl")' required>
+                    <div class="input-group-append">
+                      <span class="input-group-text bg-transparent eyeborder">
+                        <i class="fas fa-eye-slash" id="togglescpassword"></i>
+                      </span>
+                    </div>
+                  </div>
               </div>
               <div class="button-container">
-                <button type="button" class="btn btn-success btn-lg shadowbottom" id="nextBtn">Next Step</button>
+                <button type="submit" class="btn btn-success btn-lg shadowbottom" id="nextBtn">Next Step</button>
               </div>
-            </form>
           </div>
         </div>
         <div class="card forgotcards next" id="step2">
@@ -56,7 +69,6 @@
               </p>
               <p> The code will expire in time</p>
             </div>
-            <form>
               <div class="mb-3">
                 <div id="verificationCode" class="d-flex justify-content-between">
                   <input type="text" class="form-control text-center verification-input" maxlength="1" required>
@@ -69,7 +81,7 @@
               </div>
               <div class="button-container m-2">
                 <button type="button" class="btn btn-secondary btn-lg shadowbottom" id="prevBtn">Previous</button>
-                <button type="button" class="btn btn-success btn-lg shadowbottom" id="verifyBtn">Verify</button>
+                <button type="submit" class="btn btn-success btn-lg shadowbottom" id="verifyBtn">Verify</button>
               </div>
               <a href="">Resend Code</a>
             </form>
@@ -100,8 +112,10 @@
     const dots = document.querySelectorAll('.progress-dots span');
     const successModal = document.querySelector('.forgotmodal');
     const closeModal = document.querySelector('.close');
+    
     let currentStep = 0;
-
+    toggleP('togglespassword', 'password');
+    toggleP('togglescpassword', 'confirm_password');
     function updateSteps() {
       steps.forEach((step, index) => {
         step.classList.remove('active', 'previous', 'next');
@@ -160,9 +174,9 @@
       }
     });
 
-    closeModal.onclick = function () {
+  /*  closeModal.onclick = function () {
       successModal.style.display = "none";
-    }
+    }*/
 
     window.onclick = function (event) {
       if (event.target == successModal) {
