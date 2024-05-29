@@ -20,14 +20,34 @@
         .input-container {
             position: relative;
         }
+        .modal-custom-size {
+         max-width: 50%;
+         }
     </style>
    <body class="generalbg">
       <div class="container p-2">
+         <!--Modal For pdf viewer-->
+         <div class="modal fade" id="pdfmodal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-custom-size" role="document">
+               <div class="modal-content">
+                  <div class="modal-header sideback text-white">
+                  <h5 class="modal-title text-center" id="exampleModalLabel">Advice</h5>
+                  </div>
+                  <div class="modal-body justify-content-center">
+                     <object type="text/html" data="../pagespart/pdf.php" style="width:100%; height:70vh;"></object>
+                  </div>
+                  <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary shadowbottom" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-success sideback shadowbottom">Print</button>
+                  </div>
+               </div>
+            </div>
+         </div>
          <form method="post" action="">
          <div class="card p-5 shadowbottom" id="section1">
                <h3 class="text-center">Purpose</h3>
                <div class="row justify-content-center mt-3">
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom advbtn"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
                   <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-paper-plane text-white m-2"></i>Notarize</button>
                </div>
             </div>
@@ -663,29 +683,36 @@
          </form>
       </div>
       <script>
-    document.getElementById('religion').addEventListener('change', function() {
-        var otherReligionInput = document.getElementById('other-religion');
-        var dropdown = this;
+         document.getElementById('religion').addEventListener('change', function() {
+            var otherReligionInput = document.getElementById('other-religion');
+            var dropdown = this;
 
-        if (dropdown.value === 'others') {
-            dropdown.classList.add('hidden');
-            otherReligionInput.classList.remove('hidden');
-            otherReligionInput.classList.add('visible');
-            otherReligionInput.focus(); 
-        } else {
-            otherReligionInput.classList.remove('visible');
-            otherReligionInput.classList.add('hidden');
-        }
-    });
+            if (dropdown.value === 'others') {
+                  dropdown.classList.add('hidden');
+                  otherReligionInput.classList.remove('hidden');
+                  otherReligionInput.classList.add('visible');
+                  otherReligionInput.focus(); 
+            } else {
+                  otherReligionInput.classList.remove('visible');
+                  otherReligionInput.classList.add('hidden');
+            }
+         });
 
-    document.getElementById('other-religion').addEventListener('input', function() {
-        var dropdown = document.getElementById('religion');
-        if (this.value === '') {
-            dropdown.classList.remove('hidden');
-            this.classList.remove('visible');
-            this.classList.add('hidden');
-        }
-    });
+         document.getElementById('other-religion').addEventListener('input', function() {
+            var dropdown = document.getElementById('religion');
+            if (this.value === '') {
+                  dropdown.classList.remove('hidden');
+                  this.classList.remove('visible');
+                  this.classList.add('hidden');
+            }
+         });
+</script>
+<script>
+        $(document).ready(function () {
+            $('.advbtn').on('click', function (){
+               $('#pdfmodal').modal('show');
+            }); 
+         });
 </script>
    </body>
 </html>
