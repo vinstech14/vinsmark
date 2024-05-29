@@ -13,6 +13,9 @@ Regards, A.
 
 syntaxes run in terminal:
 
+For email library: composer require phpmailer/phpmailer
+
 For pdf library: composer require dompdf/dompdf
 
-For email library: composer require phpmailer/phpmailer
+
+New E install ni sa terminal pag new terminal dayun e copy ning composer require dompdf/dompdf dayun e paste the enter para mu gana si pdf.
