@@ -52,9 +52,10 @@
                     </div>
                   </div>
               </div>
-              <div class="button-container">
+              <div class="button-container mb-3">
                 <button type="submit" class="btn btn-success btn-lg shadowbottom" id="nextBtn">Next Step</button>
               </div>
+              <span>Go back to <a href="/index.php">Login</a></span>
           </div>
         </div>
         <div class="card forgotcards next" id="step2">
@@ -134,25 +135,30 @@
     }
 
     document.getElementById('nextBtn').addEventListener('click', () => {
-      if (currentStep < steps.length - 1) {
-        currentStep++;
-        updateSteps();
-      }
       const email = $('#email').val();
-      $.ajax({
-        url: "../functions/verify.php",
-        type: "POST",
-        data: { email: email },
-        success: function (response) {
-          const result = JSON.parse(response);
-          // Show
-        },
-        error: function (xhr, status, error) {
-          // Handle errors
-          console.error(xhr.responseText);
+      const newpass = $('#password').val();
+      const cpass = $('#confirm_password').val();
+      if(email && newpass && cpass){
+        if (currentStep < steps.length - 1) {
+          currentStep++;
+          updateSteps();
         }
-      });
-    });
+        const email = $('#email').val();
+        $.ajax({
+          url: "../functions/verify.php",
+          type: "POST",
+          data: { email: email },
+          success: function (response) {
+            const result = JSON.parse(response);
+            // Show
+          },
+          error: function (xhr, status, error) {
+            // Handle errors
+            console.error(xhr.responseText);
+          }
+        });
+    }
+  });
 
     document.getElementById('prevBtn').addEventListener('click', () => {
       if (currentStep > 0) {
