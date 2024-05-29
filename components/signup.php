@@ -71,7 +71,7 @@
                 </div>
                 <div class="text-center" id="sbutton">
                   <button type="submit" class="btn btn-success sideback m-3 w-50 radiusb shadowbottom createbtn"
-                    name="create" value="submit" id="create">Create</button>
+                    name="create" value="submit" id="create">Sign up</button>
                 </div>
                 <div class="text-center mb-3" id="sl">
                   <span>Already have an account?</span>
