@@ -20,34 +20,28 @@
         .input-container {
             position: relative;
         }
-        .modal-custom-size {
-         max-width: 50%;
-         }
     </style>
    <body class="generalbg">
-      <div class="container p-2">
-         <!--Modal For pdf viewer-->
-         <div class="modal fade" id="pdfmodal" tabindex="-1" role="dialog" aria-labelledby="pdfModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-custom-size" role="document">
-               <div class="modal-content">
-                  <div class="modal-header sideback text-white">
-                  <h5 class="modal-title text-center" id="exampleModalLabel">Advice</h5>
-                  </div>
-                  <div class="modal-body justify-content-center">
-                     <object type="text/html" data="../pagespart/update_pdf.php" style="width:100%; height:70vh;"></object>
-                  </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary shadowbottom" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-success sideback shadowbottom">Print</button>
-                  </div>
-               </div>
-            </div>
+      <!-- <div class="scroll-down-btn text-end">
+         <div class="col">
+           <div class="row up" id="scrollup" style="display:none;">
+             <a href="#bottom" onclick=" toggleScroll('up')">
+               <i class="fas fa-chevron-up scrollIcon" style="color:#013220;"></i>
+             </a>
+           </div>
+           <div class="row down" id="scrolldown">
+             <a href="#bottom" onclick="toggleScroll('down')">
+               <i class="fas fa-chevron-down scrollIcon side" style="color:#013220;"></i>
+             </a>
+           </div>
          </div>
+         </div>-->
+      <div class="container p-2">
          <form method="post" action="">
          <div class="card p-5 shadowbottom" id="section1">
                <h3 class="text-center">Purpose</h3>
                <div class="row justify-content-center mt-3">
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom advbtn"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
+                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom"><i class="fas fa-person-booth text-white m-2"></i>Advice</button>
                   <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section1', 'section2')"><i class="fas fa-paper-plane text-white m-2"></i>Notarize</button>
                </div>
             </div>
@@ -56,73 +50,77 @@
                   INTERVIEW SHEET (Para sa Serbisyong-Legal at/o Representasyon)
                </h3>
                <div class="row justify-content-center mt-5">
-                  <div class="col-md-6">
-                     <label for="region" class="form-label">Rehiyon:</label>
-                     <select id="region" name="region" class="form-control">
-                        <option selected disabled value="">Rehiyon</option>
-                        <option selected disabled value="">Rehiyon</option>
-                        <option value="Region I">Region I</option>
-                        <option value="Region II">Region II</option>
-                        <option value="Region III">Region III</option>
-                        <option value="Region IV-A">Region IV-A</option>
-                        <option value="MIMAROPA">MIMAROPA</option>
-                        <option value="Region V">Region V</option>
-                        <option value="Region VI">Region VI</option>
-                        <option value="Region VII">Region VII</option>
-                        <option value="Region VIII">Region VIII</option>
-                        <option value="Region IX">Region IX</option>
-                        <option value="Region X">Region X</option>
-                        <option value="Region XI">Region XI</option>
-                        <option value="Region XII">Region XII</option>
-                        <option value="Region XIII">Region XIII</option>
-                        <option value="NCR">NCR</option>
-                        <option value="CAR">CAR</option>
-                        <option value="BRMM">BRMM</option>
-                     </select>
-                     <label for="do" class="form-label">District Office:</label>
-                     <input type="text" class="form-control" id="do" name="do" />
-                     <label for="date" class="form-label">Petsa:</label>
-                     <input type="date" class="form-control" id="date" name="date" />
-                     <label for="controlNo" class="form-label">Control No.:</label>
-                     <input type="text" class="form-control" id="controlNo" name="controlNo" />
-                     <label for="signature" class="form-label">Mananayam:</label>
-                     <input type="text" class="form-control" id="mananayam" name="mananayam"  />
-                  </div>
-                  <div class="col-md-6">
-                     <label for="referredBy" class="form-label">Ini-refer ni/Inindorso ng:</label>
-                     <input type="text" class="form-control" id="referredBy" name="referredBy" />
-                     <label class="form-label" for="merit">Ginawang Aksyon:</label>
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="merit" name="merit" value="1" />
-                        <label class="form-check-label" for="merit">
-                        Higit pang pag-aaralan (merit at indency test)
-                        </label>
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="rep" name="rep" value="1" />
-                        <label class="form-check-label" for="rep">
-                        Para sa representasyon at iba pang tulong-legal
-                        </label>
-                     </div>
-                     <label for="assignTo" class="form-label">Ini-atas kay:</label>
-                     <input type="text" class="form-control" id="assignTo" name="assignTo" />
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="service" onchange="toggleInputState(id,'iservice')" />
-                        <label class="form-check-label" for="service">
-                        Ibinigay na serbisyong-legal:
-                        </label>
-                        <input type="text" class="form-control" id="iservice" name="iservice" disabled />
-                     </div>
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="others"
-                           onchange="toggleInputState(id,'iothers')" />
-                        <label class="form-check-label" for="others"> Iba pa: </label>
-                        <input type="text" class="form-control" id="iothers" name="iothers" disabled />
-                     </div>
-                  </div>
-                  <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section2', 'section1')"><i class="fas fa-arrow-left text-white m-2"></i>Previous</button>
-                  <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="sectionSelector('next', 'section2', 'section3')"><i class="fas fa-arrow-right text-white m-2"></i>Next</button>
-                  
+                  <div class="row justify-content-center mt-5">
+   <div class="col-md-6">
+      <label for="region" class="form-label">Rehiyon:</label>
+      <select id="region" name="region" required class="form-control">
+         <option selected disabled value="">Rehiyon</option>
+         <option value="Region I">Region I</option>
+         <option value="Region II">Region II</option>
+         <option value="Region III">Region III</option>
+         <option value="Region IV-A">Region IV-A</option>
+         <option value="MIMAROPA">MIMAROPA</option>
+         <option value="Region V">Region V</option>
+         <option value="Region VI">Region VI</option>
+         <option value="Region VII">Region VII</option>
+         <option value="Region VIII">Region VIII</option>
+         <option value="Region IX">Region IX</option>
+         <option value="Region X">Region X</option>
+         <option value="Region XI">Region XI</option>
+         <option value="Region XII">Region XII</option>
+         <option value="Region XIII">Region XIII</option>
+         <option value="NCR">NCR</option>
+         <option value="CAR">CAR</option>
+         <option value="BRMM">BRMM</option>
+      </select>
+      <label for="do" class="form-label">District Office:</label>
+      <input type="text" class="form-control" id="do" name="do" required />
+      <label for="date" class="form-label">Petsa:</label>
+      <input type="date" class="form-control" id="date" name="date" required />
+      <label for="controlNo" class="form-label">Control No.:</label>
+      <input type="text" class="form-control" id="controlNo" name="controlNo" required/>
+      <label for="signature" class="form-label">Mananayam:</label>
+      <input type="text" class="form-control" id="mananayam" name="mananayam" required  />
+   </div>
+   <div class="col-md-6">
+      <label for="referredBy" class="form-label">Ini-refer ni/Inindorso ng:</label>
+      <input type="text" class="form-control" id="referredBy" name="referredBy" required />
+      <label class="form-label" for="merit">Ginawang Aksyon:</label>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" id="merit" name="merit" value="1" required />
+         <label class="form-check-label" for="merit">
+         Higit pang pag-aaralan (merit at indency test)
+         </label>
+      </div>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" id="rep" name="rep" value="1" required />
+         <label class="form-check-label" for="rep">
+         Para sa representasyon at iba pang tulong-legal
+         </label>
+      </div>
+      <label for="assignTo" class="form-label">Ini-atas kay:</label>
+      <input type="text" class="form-control" id="assignTo" name="assignTo" required />
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" id="service" onchange="toggleInputState(id, 'iservice')" required />
+         <label class="form-check-label" for="service">
+         Ibinigay na serbisyong-legal:
+         </label>
+         <input type="text" class="form-control" id="iservice" name="iservice"  />
+      </div>
+      <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" id="others"
+            onchange="toggleInputState(id, 'iothers')" />
+         <label class="form-check-label" for="others"> Iba pa: </label>
+         <input type="text" class="form-control" id="iothers" name="iothers" required />
+      </div>
+   </div>
+   <button type="button" class="btn btn-secondary w-25 m-3 shadowbottom" onclick="sectionSelector('prev', 'section2', 'section1')">
+      <i class="fas fa-arrow-left text-white m-2"></i>Previous
+   </button>
+   <button type="button" class="btn btn-success sideback w-25 m-3 shadowbottom" onclick="validateForm()">
+      <i class="fas fa-arrow-right text-white m-2"></i>Next
+   </button>
+</div>
                </div>
             </div>
             <div class="card p-5 section shadowbottom" id="section3">
@@ -683,36 +681,99 @@
          </form>
       </div>
       <script>
-         document.getElementById('religion').addEventListener('change', function() {
-            var otherReligionInput = document.getElementById('other-religion');
-            var dropdown = this;
+    document.getElementById('religion').addEventListener('change', function() {
+        var otherReligionInput = document.getElementById('other-religion');
+        var dropdown = this;
 
-            if (dropdown.value === 'others') {
-                  dropdown.classList.add('hidden');
-                  otherReligionInput.classList.remove('hidden');
-                  otherReligionInput.classList.add('visible');
-                  otherReligionInput.focus(); 
-            } else {
-                  otherReligionInput.classList.remove('visible');
-                  otherReligionInput.classList.add('hidden');
-            }
-         });
+        if (dropdown.value === 'others') {
+            dropdown.classList.add('hidden');
+            otherReligionInput.classList.remove('hidden');
+            otherReligionInput.classList.add('visible');
+            otherReligionInput.focus(); 
+        } else {
+            otherReligionInput.classList.remove('visible');
+            otherReligionInput.classList.add('hidden');
+        }
+    });
 
-         document.getElementById('other-religion').addEventListener('input', function() {
-            var dropdown = document.getElementById('religion');
-            if (this.value === '') {
-                  dropdown.classList.remove('hidden');
-                  this.classList.remove('visible');
-                  this.classList.add('hidden');
-            }
-         });
+    document.getElementById('other-religion').addEventListener('input', function() {
+        var dropdown = document.getElementById('religion');
+        if (this.value === '') {
+            dropdown.classList.remove('hidden');
+            this.classList.remove('visible');
+            this.classList.add('hidden');
+        }
+    });
 </script>
+
 <script>
-        $(document).ready(function () {
-            $('.advbtn').on('click', function (){
-               $('#pdfmodal').modal('show');
-            }); 
-         });
+function validateForm() {
+   const requiredFields = [
+      'region', 'do', 'date', 'controlNo', 'mananayam', 'referredBy', 'assignTo'
+   ];
+   const checkboxes = ['merit', 'rep'];
+   const dependentFields = ['iservice', 'iothers'];
+   let isValid = true;
+
+   // Check if required text inputs are filled
+   requiredFields.forEach(id => {
+      const element = document.getElementById(id);
+      if (element && !element.value) {
+         isValid = false;
+         element.style.borderColor = 'red';
+      } else {
+         element.style.borderColor = '';
+      }
+   });
+
+   // Check if at least one of the checkboxes is checked
+   const isCheckboxChecked = checkboxes.some(id => document.getElementById(id).checked);
+   if (!isCheckboxChecked) {
+      isValid = false;
+      checkboxes.forEach(id => {
+         const label = document.querySelector(`label[for=${id}]`);
+         if (label) {
+            label.style.color = 'red';
+         }
+      });
+   } else {
+      checkboxes.forEach(id => {
+         const label = document.querySelector(`label[for=${id}]`);
+         if (label) {
+            label.style.color = '';
+         }
+      });
+   }
+
+   // Check if dependent inputs are filled if their checkboxes are checked
+   dependentFields.forEach(id => {
+      const checkbox = document.getElementById(id.replace('i', ''));
+      const input = document.getElementById(id);
+      if (checkbox && checkbox.checked && !input.value) {
+         isValid = false;
+         input.style.borderColor = 'red';
+      } else {
+         input.style.borderColor = '';
+      }
+   });
+
+   if (isValid) {
+      sectionSelector('next', 'section2', 'section3');
+   } else {
+      alert('Please fill in all required fields.');
+   }
+}
+
+function toggleInputState(checkboxId, inputId) {
+   const checkbox = document.getElementById(checkboxId);
+   const input = document.getElementById(inputId);
+   input.disabled = !checkbox.checked;
+   if (!checkbox.checked) {
+      input.value = '';
+      input.style.borderColor = '';
+   }
+}
+
 </script>
    </body>
 </html>

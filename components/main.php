@@ -87,6 +87,12 @@
                 <span class="d-none d-sm-inline">Interview Sheet</span>
               </a>
             </li>
+            <li class="nav-item py-2 py-sm-0" id="murequestm">
+              <a class="nav-link text-white fs-5 d-flex" onclick="loadPage('MyRequest')"><i
+                  class="fas fa-newspaper p-2"></i>
+                <span class="d-none d-sm-inline">My Request</span>
+              </a>
+            </li>
             <li class="nav-item py-2 py-sm-0">
               <a class="nav-link text-white fs-5 d-flex" onclick="logout()"><i class="fas fa-sign-out-alt p-2"></i>
                 <span class="d-none d-sm-inline">Logout</span>
