@@ -176,7 +176,57 @@
                <div id="calendar"></div>
             </div>
          </div>
-       
+       <div class="row justify-content-end add-event-button-container">
+        <div class="col-md-2 mb-5">
+            <ul>
+                <?php
+                // Set the default timezone
+                date_default_timezone_set('Asia/Manila');
+
+                // Get the current date
+                $currentDate = date('Y-m-d');
+
+                // Database connection parameters
+                $servername = "sql112.infinityfree.com";
+                $username = "if0_35985447";
+                $password = "lCyvH63NOd";
+                $database = "if0_35985447_pao";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $database);
+
+                // Check connection
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
+
+                // Query to select titles where the start_datetime matches the current date
+                $sql = "SELECT title FROM schedule_list WHERE DATE(start_datetime) = '$currentDate'";
+
+                // Execute the query
+                $result = $conn->query($sql);
+
+                // Fetch results
+                $reminders = [];
+                if ($result->num_rows > 0) {
+                    $reminders = $result->fetch_all(MYSQLI_ASSOC);
+                }
+
+                // Close the database connection
+                $conn->close();
+
+                // Display the reminders
+                if (!empty($reminders)) {
+                    foreach ($reminders as $reminder) {
+                        echo "<li>" . htmlspecialchars($reminder['title']) . "</li>";
+                    }
+                } else {
+                    echo "<li>No reminders for today.</li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
       </div>
       
       <!-- Event Modal -->
@@ -378,7 +428,7 @@
          
            function fetchEvents() {
                $.ajax({
-                   url: '../../functions/fetch_events.php',
+                   url: 'fetch_events.php',
                    type: 'GET',
                    dataType: 'json',
                    success: function (response) {
@@ -544,7 +594,7 @@
                };
                
                $.ajax({
-                   url: '../../functions/save_schedule.php',
+                   url: 'save_schedule.php',
                    type: 'POST',
                    data: formData,
                    success: function (response) {
@@ -562,7 +612,7 @@
                var id = $(this).attr('data-id');
                if (confirm("Are you sure to delete this scheduled event?")) {
                    $.ajax({
-                       url: '../../functions/delete_schedule.php',
+                       url: 'delete_schedule.php',
                        type: 'POST',
                        data: { id: id },
                        success: function (response) {
