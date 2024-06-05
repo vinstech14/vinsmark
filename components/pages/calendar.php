@@ -32,7 +32,7 @@
          html, body {
          height: 100%;
          width: 100%;
-         font-family: Apple Chancery, cursive;
+         font-family: Arial, sans-serif;
          margin: auto;
          padding: auto;
          overflow: auto; 
@@ -72,12 +72,15 @@
          height: 100%; 
          overflow: auto;
          padding-left: 10px; 
+         overflow-y: auto;
+        
          }
          #calendar {
          flex: 1 1 auto;
-         width:100%; 
+         width:auto%; 
          height: 100%; 
          top: 10px;
+         
          }
          .fc-prevMonth-button,
          .fc-nextMonth-button {
@@ -145,26 +148,143 @@
          margin-top: 20px; 
          }
         
-         .hr{
-            margin-top: 50px;
-         }
+       .reminder-list-container {
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    padding-right: 10px; /* Add padding to avoid content touching the container edge */
+}
+
+.reminder-list-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.reminder-item-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.reminder-item-container:hover {
+    transform: translateY(-5px);
+}
+
+.reminder-item {
+    margin-bottom: 0; /* No additional space needed as it's inside the container */
+}
+
+.reminder-date {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.reminder-title {
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 5px;
+}
+
+.reminder-description {
+    margin-top: 10px;
+    font-style: italic;
+    text-align: justify; /* Justify text */
+    word-wrap: break-word; /* Ensure long descriptions wrap */
+    color: #555;
+}
+
+.toggle-reminders {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+    text-align: center;
+}
+
+.hidden-reminder {
+    display: none;
+}
       </style>
    </head>
    <body class="bg-light">
       <div class="container py-3" id="page-container">
          
+<div class="row justify-content-between add-event-button-container">
+   
+    <div class="col-md-4 mb-5">
+        <?php
+        date_default_timezone_set('Asia/Manila');
 
-      <hr class="hr">
-         <div class="row justify-content-between add-event-button-container">
+        $currentDate = date('Y-m-d');
+           $servername = "sql112.infinityfree.com";
+                $username = "if0_35985447";
+                $password = "lCyvH63NOd";
+                $database = "if0_35985447_pao";
+        $conn = new mysqli($servername, $username, $password, $database);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT title, description, start_datetime FROM schedule_list WHERE DATE(start_datetime) = '$currentDate'";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            $reminders = [];
+            while ($row = $result->fetch_assoc()) {
+                $eventDate = date('l, j F Y', strtotime($row['start_datetime']));
+                $title = htmlspecialchars($row['title']);
+                $description = htmlspecialchars($row['description']);
+                $reminders[] = [
+                    'date' => $eventDate,
+                    'title' => $title,
+                    'description' => $description
+                ];
+            }
+
+            echo "<div class='reminder-list-container'>";
+            foreach ($reminders as $index => $reminder) {
+                $hiddenClass = $index > 0 ? 'hidden-reminder' : ''; // Hide all but the first reminder
+                echo "
+                    <div class='reminder-item-container $hiddenClass'>
+                        <div class='reminder-item'>
+                            <div class='reminder-date'>{$reminder['date']}</div>
+                            <div class='reminder-title'>{$reminder['title']}</div>
+                            <div class='reminder-description'>{$reminder['description']}</div>
+                        </div>
+                    </div>
+                ";
+            }
+            echo "</div>";
+
+            if (count($reminders) > 1) {
+                echo "
+                    <div id='toggle-reminders' class='toggle-reminders'>
+                        Show more reminders
+                    </div>
+                ";
+            }
+        } else {
+            echo "
+                <div class='reminder-item-container'>
+                    <div class='reminder-item'>
+                        <div class='reminder-title'>No reminders for today.</div>
+                    </div>
+                </div>
+            ";
+        }
+
+        $conn->close();
+        ?>
+    </div>
+</div>
+   
+         <div class="row justify-content-end add-event-button-container">
          
-         <div class="col-md-3 mb-5">
-            <select class="form-select w-100" aria-label="Default select example">
-                <option selected>Atty</option>
-                <option value="1">All</option>
-                <option value="2">Atty1</option>
-                <option value="3">Atty 2</option>
-            </select>
-        </div>
+         
             <div class="col-md-2 mb-5">
                <button class="btn btn-green w-100" name="add-event-btn" data-bs-toggle="modal" data-bs-target="#event-modal">
                <i class="fa fa-plus"></i>  Add Event
@@ -176,57 +296,7 @@
                <div id="calendar"></div>
             </div>
          </div>
-       <div class="row justify-content-end add-event-button-container">
-        <div class="col-md-2 mb-5">
-            <ul>
-                <?php
-                // Set the default timezone
-                date_default_timezone_set('Asia/Manila');
-
-                // Get the current date
-                $currentDate = date('Y-m-d');
-
-                // Database connection parameters
-                $servername = "sql112.infinityfree.com";
-                $username = "if0_35985447";
-                $password = "lCyvH63NOd";
-                $database = "if0_35985447_pao";
-
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $database);
-
-                // Check connection
-                if ($conn->connect_error) {
-                    die("Connection failed: " . $conn->connect_error);
-                }
-
-                // Query to select titles where the start_datetime matches the current date
-                $sql = "SELECT title FROM schedule_list WHERE DATE(start_datetime) = '$currentDate'";
-
-                // Execute the query
-                $result = $conn->query($sql);
-
-                // Fetch results
-                $reminders = [];
-                if ($result->num_rows > 0) {
-                    $reminders = $result->fetch_all(MYSQLI_ASSOC);
-                }
-
-                // Close the database connection
-                $conn->close();
-
-                // Display the reminders
-                if (!empty($reminders)) {
-                    foreach ($reminders as $reminder) {
-                        echo "<li>" . htmlspecialchars($reminder['title']) . "</li>";
-                    }
-                } else {
-                    echo "<li>No reminders for today.</li>";
-                }
-                ?>
-            </ul>
-        </div>
-    </div>
+       
       </div>
       
       <!-- Event Modal -->
@@ -628,5 +698,18 @@
          });
          
       </script>
+       <script>
+document.getElementById('toggle-reminders').addEventListener('click', function() {
+    var hiddenReminders = document.querySelectorAll('.hidden-reminder');
+    var isHidden = hiddenReminders[0].style.display === 'none';
+
+    hiddenReminders.forEach(function(reminder) {
+        reminder.style.display = isHidden ? 'block' : 'none';
+    });
+
+    this.textContent = isHidden ? 'Show less reminders' : 'Show more reminders';
+});
+
+</script>
    </body>
 </html>
